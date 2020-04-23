@@ -28,16 +28,14 @@ imgChange($event) {
    * @param leval 压缩比例，0-1，越小  越模糊
    */
   imgCompress(img, type = 'image/jpeg', leval = .3) {
-    // console.log([img]);
     const width = img.width * leval;
     const height = img.height * leval;
-    // console.log(width, height);
     const canvas = document.createElement('canvas');
     canvas.width = width;
     canvas.height = height;
     const context = canvas.getContext('2d');  // 绘图环境
     context.drawImage(img, 0, 0, width, height);
-    // 将原来图片的质量压缩到原先的0.5倍。
+    // 将原来图片的质量压缩到原先的leval倍。
     const base64 = canvas.toDataURL(type, leval); // data url的形式
     const blob = this.dataURLtoBlob(base64);
     // console.log(base64);
