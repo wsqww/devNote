@@ -1,8 +1,8 @@
 1. 选择文件
 ```javascript
 /**
- * input 
- * @param
+ * input change事件
+ * @param $event <input/> dom对象
  */
 imgChange($event) {
   const reader = new FileReader();
