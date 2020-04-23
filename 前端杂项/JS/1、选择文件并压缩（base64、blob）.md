@@ -1,5 +1,9 @@
 1. 选择文件
 ```javascript
+/**
+ * input 
+ * @param
+ */
 imgChange($event) {
   const reader = new FileReader();
   const imgFile = $event.target.files[0];
