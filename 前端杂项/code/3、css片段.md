@@ -1,7 +1,14 @@
-[TOC]
-## css 代码片段
+<!-- TOC -->
 
-1. #### 表格，表头固定，内容区域超出 滚动
+- [表格，表头固定，内容区域超出 滚动](#表格表头固定内容区域超出-滚动)
+- [禁止选择](#禁止选择)
+- [单/复选 样式](#单复选-样式)
+- [单行文字超出显示省略号](#单行文字超出显示省略号)
+- [aaa](#aaa)
+
+<!-- /TOC -->
+
+#### 表格，表头固定，内容区域超出 滚动
 ```css
 table.fixed_table thead {
   display: table;
@@ -22,7 +29,7 @@ table.fixed_table tbody tr {
 }
 ```
 
-2. #### 禁止选择
+#### 禁止选择
 ```css
 .unselect {
     -moz-user-select:none; /*火狐*/
@@ -33,7 +40,7 @@ table.fixed_table tbody tr {
 }
 ```
 
-3. #### 单/复选 样式
+#### 单/复选 样式
 ```html
 // 单复选框 （不需要 js）
 // 通过 .icon 标签展示选中状态
@@ -104,3 +111,14 @@ table.fixed_table tbody tr {
   }
 }
 ```
+
+#### 单行文字超出显示省略号
+```css
+.ellipsis {
+  overflow: hidden; // 超出的文本隐藏
+  text-overflow: ellipsis; // 溢出用省略号显示
+  white-space: nowrap; // 溢出不换行
+}
+```
+
+#### aaa 
