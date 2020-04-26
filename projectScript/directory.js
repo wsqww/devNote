@@ -7,7 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 const projectPath = path.resolve(__dirname, '../');
-// console.log(__dirname, __filename, process.cwd(), projectPath);
+// console.log(__dirname, __filename, process.cwd(), path.resolve('./'), projectPath);
 
 
 const ignoreDir = ['.git', 'README.md', 'favourite', 'projectScript']; // 不用处理的 文件/文件夹
