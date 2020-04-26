@@ -1,6 +1,14 @@
+/**
+ * 此脚本 用于生成 README.md 的内容
+ * 可遍历项目下所有 .md文件，生成 链接 及 目录
+ */
+
+
 const fs = require('fs');
 const path = require('path');
-const filePath = path.resolve('./');
+const projectPath = path.resolve(__dirname, '../');
+// console.log(__dirname, __filename, process.cwd(), projectPath);
+
 
 const ignoreDir = ['.git', 'README.md', 'favourite', 'projectScript']; // 不用处理的 文件/文件夹
 
@@ -10,12 +18,8 @@ const mdToc = [
 ];
 const mdContent = [];
 
-getDirTree(filePath);
-// const tree = getMdDirTree(filePath);
-// console.log(tree);
+getDirTree(projectPath);
 
-// console.log(mdToc);
-// console.log(mdContent);
 creatMdText();
 
 /**
@@ -84,7 +88,7 @@ function creatMdText() {
     '\n\n',
     ...mdContent
   ];
-  fs.writeFile(path.resolve(filePath, 'README.md'), mdText.join('\n'), (err) => {
+  fs.writeFile(path.resolve(projectPath, 'README.md'), mdText.join('\n'), (err) => {
     if (err) {
       console.log('写入失败！！');
       throw err
