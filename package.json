@@ -1,0 +1,19 @@
+{
+  "name": "devnote",
+  "version": "1.0.0",
+  "description": "develop note",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsqww/devNote.git"
+  },
+  "author": "王汪汪",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wsqww/devNote/issues"
+  },
+  "homepage": "https://github.com/wsqww/devNote#readme"
+}
