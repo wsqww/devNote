@@ -10,7 +10,7 @@ const mdToc = [
 ];
 const mdContent = [];
 
-getMdDirTree(filePath);
+getDirTree(filePath);
 // const tree = getMdDirTree(filePath);
 // console.log(tree);
 
@@ -19,12 +19,12 @@ getMdDirTree(filePath);
 creatMdText();
 
 /**
- * 生成文件树
+ * 获取文件树
  * @param {string} filePath 文件夹路径
- * @param {string} prefix 生成path的前缀
+ * @param {string} rootPath 新生成path的根路径
  * @param {number} deep 递归深度ß
  */
-function getMdDirTree(filePath, prefix = '/', deep = 0) {
+function getDirTree(filePath, rootPath = '/', deep = 0) {
   const fileArr =  fs.readdirSync(filePath);
   // const fileResult = [];
   fileArr.forEach(name => {
@@ -34,7 +34,7 @@ function getMdDirTree(filePath, prefix = '/', deep = 0) {
     if( ignoreDir.indexOf(name) > -1 ) return false; // 忽略文件
     if(isFile && path.extname(name) !== '.md' ) return false; // 非md文件不处理
 
-    const treePath = `${prefix}${name}`;
+    const pathSrr = `${rootPath}${name}`;
     let children = [];
     let mdText = '';
     if (!isFile) {
@@ -43,15 +43,15 @@ function getMdDirTree(filePath, prefix = '/', deep = 0) {
       mdToc[0].push(`${Array(2*deep).fill(' ').join('')}- [${name}](#${name.toLowerCase()})`);
       mdToc[1].push(`#${name.toLowerCase()}`);
 
-      children = getMdDirTree(path.resolve(filePath, name), `${treePath}/`, deep+1);
+      children = getDirTree(path.resolve(filePath, name), `${pathSrr}/`, deep+1);
     }else {
-      mdText = `- [${path.basename(name, '.md')}](${treePath})`;
+      mdText = `- [${path.basename(name, '.md')}](${pathSrr})`;
       mdContent.push(mdText);
     }
 
     // fileResult.push({
     //   name,
-    //   path: treePath,
+    //   path: pathSrr,
     //   type: isFile ? 'file' : 'dir',
     //   mdText,
     //   children

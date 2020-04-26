@@ -22,6 +22,7 @@
 ### NodeJs
 #### Code
 - [1-终端提示](/NodeJs/Code/1-终端提示.md)
+- [2-文件操作](/NodeJs/Code/2-文件操作.md)
 #### Koa
 - [1-环境](/NodeJs/Koa/1-环境.md)
 - [2-目录结构](/NodeJs/Koa/2-目录结构.md)
@@ -39,5 +40,6 @@
 - [1-文件操作](/前端杂项/Code/1-文件操作.md)
 - [2-audio播放器](/前端杂项/Code/2-audio播放器.md)
 - [3-css片段](/前端杂项/Code/3-css片段.md)
+- [4-数组去重](/前端杂项/Code/4-数组去重.md)
 #### 面试题
 ----
