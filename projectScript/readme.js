@@ -70,7 +70,7 @@ function getDirTree(filePath, rootPath = '/', deep = 0) {
 // 写入 内容
 function creatMdText() {
   // 锚点去重
-  let rePoint = getArrRepeatIndex(mdToc[1]); // 记录重复点 第一次出现的位置 及 重复点的位置
+  let rePoint = getArrRepeatIndex(mdToc[1]); // 记录重复项 第一次出现的位置 及 后续重复项的位置
   // console.log(rePoint);
 
   Object.keys(rePoint).forEach((key) => {
@@ -106,7 +106,7 @@ function creatMdText() {
  * @param {Array<string>} arr 
  */
 function getArrRepeatIndex(arr) {
-  let rePoint = {}; // 记录重复点 第一次出现的位置(key) 及 重复点的位置(value[])
+  let rePoint = {}; // 记录重复项 第一次出现的位置(key) 及 重复点的位置(value[])
   arr.forEach((point, index) => {
     if(point === true) return; // 跳过 已经判断过的元素
     let resultArr = [];
@@ -117,7 +117,7 @@ function getArrRepeatIndex(arr) {
         arr[index+1+idx] = true; // 重复的元素 做标记
       }
     });
-    // 长度大于 0 ，记录重复点
+    // 长度大于 0 ，记录重复项
     if (resultArr.length > 0) {
       rePoint[index] = resultArr;
     }
