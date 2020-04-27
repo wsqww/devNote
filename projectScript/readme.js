@@ -88,7 +88,8 @@ function creatMdText() {
     '\n\n',
     ...mdContent,
     `\n\n\n`,
-    `<font color=#bcbcbc size=2>README.md内容由 '${__filename.replace(projectPath, '.')}' 自动写入</font>`
+    `<font color=#bcbcbc size=2>README.md内容由 '${__filename.replace(projectPath, '.')}' 自动写入</font>`,
+    `<sub>README.md内容由 '${__filename.replace(projectPath, '.')}' 自动写入</sub>`
   ];
   fs.writeFile(path.resolve(projectPath, 'README.md'), mdText.join('\n'), (err) => {
     if (err) {
