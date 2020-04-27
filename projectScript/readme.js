@@ -42,14 +42,14 @@ function getDirTree(filePath, rootPath = '/', deep = 0) {
     let children = [];
     let mdText = '';
     if (!isFile) {
-      mdText = `${Array(3+deep).fill('#').join('')} ${name}`;
+      mdText = `${Array(3+deep).fill('#').join('')} ${name}`;  // ### name
       mdContent.push(mdText);
-      mdToc[0].push(`${Array(2*deep).fill(' ').join('')}- [${name}](#${name.toLowerCase()})`);
-      mdToc[1].push(`#${name.toLowerCase()}`);
+      mdToc[0].push(`${Array(2*deep).fill(' ').join('')}- [${name}](#${name.toLowerCase()})`); // - [name](#name)
+      mdToc[1].push(`#${name.toLowerCase()}`); // #angular
 
       children = getDirTree(path.resolve(filePath, name), `${pathSrr}/`, deep+1);
     }else {
-      mdText = `- [${path.basename(name, '.md')}](${pathSrr})`;
+      mdText = `- [${path.basename(name, '.md')}](${pathSrr})`; // - [mdName](/mdpath.md)
       mdContent.push(mdText);
     }
 
