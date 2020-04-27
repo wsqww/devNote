@@ -16,8 +16,7 @@
 
 
 ### Angular
-- [1-环境搭建](/Angular/1-环境搭建.md)
-- [2-目录结构](/Angular/2-目录结构.md)
+- [1-项目搭建](/Angular/1-项目搭建.md)
 ----
 ### NodeJs
 #### Code
@@ -43,3 +42,8 @@
 - [4-数组去重](/前端杂项/Code/4-数组去重.md)
 #### 面试题
 ----
+
+
+
+
+<font color=#bcbcbc size=2>README.md内容由 './projectScript/readme.js' 自动写入</font>
