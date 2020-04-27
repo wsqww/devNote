@@ -46,4 +46,4 @@
 
 
 
-<sub style="color:#bcbcbc;">README.md内容由 './projectScript/readme.js' 自动写入</sub>
+<sub style="color:#bcbcbc;">README.md内容由 './projectScript/readme.js' 执行写入</sub>

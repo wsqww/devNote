@@ -1,6 +1,7 @@
 /**
  * 此脚本 用于生成 README.md 的内容
  * 可遍历项目下所有 .md文件，生成 链接 及 目录
+ * npm run readme 执行此文件
  */
 
 
@@ -88,7 +89,7 @@ function creatMdText() {
     '\n\n',
     ...mdContent,
     `\n\n\n`,
-    `<sub style="color:#bcbcbc;">README.md内容由 '${__filename.replace(projectPath, '.')}' 自动写入</sub>`
+    `<sub style="color:#bcbcbc;">README.md内容由 '${__filename.replace(projectPath, '.')}' 执行写入</sub>`
   ];
   fs.writeFile(path.resolve(projectPath, 'README.md'), mdText.join('\n'), (err) => {
     if (err) {
