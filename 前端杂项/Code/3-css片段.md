@@ -4,7 +4,7 @@
 - [禁止选择](#禁止选择)
 - [单/复选 样式](#单复选-样式)
 - [单行文字超出显示省略号](#单行文字超出显示省略号)
-- [aaa](#aaa)
+- [滚动条样式](#滚动条样式)
 
 <!-- /TOC -->
 
@@ -121,4 +121,40 @@ table.fixed_table tbody tr {
 }
 ```
 
-#### aaa 
+#### 滚动条样式
+```scss
+.scrollbar {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+    border-radius: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-thumb:horizontal,
+  &::-webkit-scrollbar-thumb:vertical {
+    border-radius: 3px;
+    background-color: transparent;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-track-piece {
+      background-color: #ccc;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: #999;
+    }
+  }
+}
+```
