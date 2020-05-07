@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "readme": "node projectScript/readme.js"
+    "readme": "node script/readme.js"
   },
   "repository": {
     "type": "git",

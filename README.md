@@ -9,8 +9,9 @@
 - [React](#react)
 - [Vue](#vue)
 - [webpack](#webpack)
-- [前端杂项](#前端杂项)
+- [前端](#前端)
   - [Code](#code-1)
+  - [设计模式](#设计模式)
   - [面试题](#面试题)
 ----
 
@@ -46,17 +47,19 @@
 ----
 ### webpack
 ----
-### 前端杂项
+### 前端
 #### Code
-- [1-文件操作](/前端杂项/Code/1-文件操作.md)
-- [2-audio播放器](/前端杂项/Code/2-audio播放器.md)
-- [3-css片段](/前端杂项/Code/3-css片段.md)
-- [4-数组去重](/前端杂项/Code/4-数组去重.md)
+- [1-文件操作](/前端/Code/1-文件操作.md)
+- [2-audio播放器](/前端/Code/2-audio播放器.md)
+- [3-css片段](/前端/Code/3-css片段.md)
+- [4-数组去重](/前端/Code/4-数组去重.md)
+#### 设计模式
+- [1-学习](/前端/设计模式/1-学习.md)
 #### 面试题
-- [1-javascript基础](/前端杂项/面试题/1-javascript基础.md)
+- [1-javascript基础](/前端/面试题/1-javascript基础.md)
 ----
 
 
 
 
-<sub style="color:#bcbcbc;">README.md内容由 './projectScript/readme.js' 执行写入</sub>
+<sub style="color:#bcbcbc;">README.md内容由 './script/readme.js' 执行写入</sub>
