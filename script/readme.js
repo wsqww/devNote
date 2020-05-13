@@ -30,7 +30,10 @@ creatMdText();
  * @param {number} deep 递归深度ß
  */
 function getDirTree(filePath, rootPath = '/', deep = 0) {
-  const fileArr =  fs.readdirSync(filePath);
+  const fileArr =  fs.readdirSync(filePath).sort((a, b) => {
+    return getFileSortNum(a) - getFileSortNum(b);
+  });
+  // console.log(fileArr);
   // const fileResult = [];
   fileArr.forEach(name => {
     const stat = fs.statSync(path.resolve(filePath, name));
@@ -124,3 +127,14 @@ function getArrRepeatIndex(arr) {
   });
   return rePoint;
 }
+
+
+// console.log(getFileSortNum('2-哈哈哈'));
+// 截取 文件名 '-' 之前的 数字，若没有则 返回 -1
+function getFileSortNum(fileName) {
+  const index = fileName.indexOf('-');
+  if (index > 0) {
+    return Number(fileName.substring(0, index));
+  }
+  return index;
+} 
