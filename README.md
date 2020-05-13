@@ -19,6 +19,7 @@
 
 ### Angular
 - [1-项目搭建](/Angular/1-项目搭建.md)
+- [10-组件通信](/Angular/10-组件通信.md)
 - [2-module模块](/Angular/2-module模块.md)
 - [3-routing路由](/Angular/3-routing路由.md)
 - [4-component组件](/Angular/4-component组件.md)
@@ -42,8 +43,8 @@
 - [2-目录结构](/React/2-目录结构.md)
 ----
 ### Vue
-- [1-环境搭建](/Vue/1-环境搭建.md)
-- [2-目录结构Cli-V3](/Vue/2-目录结构Cli-V3.md)
+- [1-项目搭建](/Vue/1-项目搭建.md)
+- [2-CDN资源优化](/Vue/2-CDN资源优化.md)
 ----
 ### webpack
 ----
