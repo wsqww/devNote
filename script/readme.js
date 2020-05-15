@@ -33,8 +33,7 @@ function getDirTree(filePath, rootPath = '/', deep = 0) {
   const fileArr =  fs.readdirSync(filePath).sort((a, b) => {
     return getFileSortNum(a) - getFileSortNum(b);
   });
-  // console.log(fileArr);
-  // const fileResult = [];
+
   fileArr.forEach(name => {
     const stat = fs.statSync(path.resolve(filePath, name));
     const isFile = stat.isFile(); // 是否为文件
@@ -57,17 +56,10 @@ function getDirTree(filePath, rootPath = '/', deep = 0) {
       mdContent.push(mdText);
     }
 
-    // fileResult.push({
-    //   name,
-    //   path: pathSrr,
-    //   type: isFile ? 'file' : 'dir',
-    //   mdText,
-    //   children
-    // })
-  
   });
+
   if (deep === 1){ mdContent.push('----') };
-  // return fileResult;
+
 }
 
 // 写入 内容
