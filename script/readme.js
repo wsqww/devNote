@@ -78,11 +78,11 @@ function creatMdText() {
   // 写入
   const mdText = [
     '## 开发学习笔记',
-    '\n',
+    '\n\n',
     ...mdToc[0],
-    '\n',
+    '\n\n',
     '----',
-    '\n',
+    '\n\n',
     ...mdContent,
     `\n\n`,
     `<sub style="color:#bcbcbc;">README.md内容由 '${__filename.replace(projectPath, '.')}' 执行写入</sub>`
