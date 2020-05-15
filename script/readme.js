@@ -58,7 +58,7 @@ function getDirTree(filePath, rootPath = '/', deep = 0) {
 
   });
 
-  if (deep === 1){ mdContent.push('----') };
+  if (deep === 1){ mdContent.push('\n', '----', '\n') };
 
 }
 
