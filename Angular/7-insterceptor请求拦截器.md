@@ -78,7 +78,7 @@ export class DefaultInterceptor implements HttpInterceptor {
       }
     }
 
-    confirm(`提示？(${event.status})`);
+    confirm(`Http error（${event.status}）`);
     throw event;
   }
 }
