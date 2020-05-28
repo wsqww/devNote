@@ -40,6 +40,7 @@
 - [9-observables可观察对象](/Angular/9-observables可观察对象.md)
 - [10-组件通信](/Angular/10-组件通信.md)
 - [11-HttpClient](/Angular/11-HttpClient.md)
+- [12-environments环境变量](/Angular/12-environments环境变量.md)
 
 
 ----
