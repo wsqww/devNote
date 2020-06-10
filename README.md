@@ -3,14 +3,17 @@
 
 
 - [Vue](#vue)
+- [.history](#.history)
+  - [前端](#前端)
+    - [Code](#code)
 - [Angular](#angular)
 - [NodeJs](#nodejs)
-  - [Code](#code)
+  - [Code](#code-1)
   - [Koa](#koa)
 - [React](#react)
 - [webpack](#webpack)
-- [前端](#前端)
-  - [Code](#code-1)
+- [前端](#前端-1)
+  - [Code](#code-2)
   - [资源收集](#资源收集)
   - [面试题](#面试题)
 
@@ -23,6 +26,19 @@
 ### Vue
 - [1-项目搭建](/Vue/1-项目搭建.md)
 - [2-CDN资源优化](/Vue/2-CDN资源优化.md)
+
+
+----
+
+
+### .history
+#### 前端
+##### Code
+- [5-文件MIME类型_20200610105049](/.history/前端/Code/5-文件MIME类型_20200610105049.md)
+- [5-文件MIME类型_20200610105207](/.history/前端/Code/5-文件MIME类型_20200610105207.md)
+- [5-文件MIME类型_20200610105329](/.history/前端/Code/5-文件MIME类型_20200610105329.md)
+- [5-文件MIME类型_20200610105348](/.history/前端/Code/5-文件MIME类型_20200610105348.md)
+- [5-文件MIME类型_20200610105624](/.history/前端/Code/5-文件MIME类型_20200610105624.md)
 
 
 ----
@@ -80,6 +96,7 @@
 - [3-css片段](/前端/Code/3-css片段.md)
 - [4-数组去重](/前端/Code/4-数组去重.md)
 - [4-正则](/前端/Code/4-正则.md)
+- [5-文件MIME类型](/前端/Code/5-文件MIME类型.md)
 #### 资源收集
 - [资源收集](/前端/资源收集/资源收集.md)
 #### 面试题
