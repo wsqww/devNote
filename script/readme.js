@@ -11,7 +11,7 @@ const projectPath = path.resolve(__dirname, '../');
 // console.log(__dirname, __filename, process.cwd(), path.resolve('./'), projectPath);
 
 
-const ignoreDir = ['.git', 'README.md', 'favourite', 'script']; // 不用处理的 文件/文件夹
+const ignoreDir = ['.history', '.git', 'README.md', 'favourite', 'script']; // 不用处理的 文件/文件夹
 
 const mdToc = [
   [], // 存 md list格式

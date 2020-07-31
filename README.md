@@ -3,20 +3,15 @@
 
 
 - [Vue](#vue)
-- [.history](#.history)
-  - [Angular](#angular)
-  - [前端](#前端)
-    - [Code](#code)
-    - [资源收集](#资源收集)
-- [Angular](#angular-1)
+- [Angular](#angular)
 - [NodeJs](#nodejs)
-  - [Code](#code-1)
+  - [Code](#code)
   - [Koa](#koa)
 - [React](#react)
 - [webpack](#webpack)
-- [前端](#前端-1)
-  - [Code](#code-2)
-  - [资源收集](#资源收集-1)
+- [前端](#前端)
+  - [Code](#code-1)
+  - [资源收集](#资源收集)
   - [面试题](#面试题)
 
 
@@ -28,25 +23,6 @@
 ### Vue
 - [1-项目搭建](/Vue/1-项目搭建.md)
 - [2-CDN资源优化](/Vue/2-CDN资源优化.md)
-
-
-----
-
-
-### .history
-#### Angular
-- [3-routing路由_20200506102259](/.history/Angular/3-routing路由_20200506102259.md)
-- [3-routing路由_20200731152653](/.history/Angular/3-routing路由_20200731152653.md)
-#### 前端
-##### Code
-- [5-文件MIME类型_20200610105049](/.history/前端/Code/5-文件MIME类型_20200610105049.md)
-- [5-文件MIME类型_20200610105207](/.history/前端/Code/5-文件MIME类型_20200610105207.md)
-- [5-文件MIME类型_20200610105329](/.history/前端/Code/5-文件MIME类型_20200610105329.md)
-- [5-文件MIME类型_20200610105348](/.history/前端/Code/5-文件MIME类型_20200610105348.md)
-- [5-文件MIME类型_20200610105624](/.history/前端/Code/5-文件MIME类型_20200610105624.md)
-##### 资源收集
-- [资源收集_20200512130919](/.history/前端/资源收集/资源收集_20200512130919.md)
-- [资源收集_20200721092656](/.history/前端/资源收集/资源收集_20200721092656.md)
 
 
 ----
