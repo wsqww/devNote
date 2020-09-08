@@ -201,3 +201,42 @@ new Promise((resolve, reject)=> {
 console.log('script end'); // 5
 
 ```
+
+### 矩阵置0
+
+```javascript
+let arr1 = [
+  [1, 1, 1, 1, 1],
+  [1, 1, 0, 1, 1],
+  [1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1],
+];
+let arr2 = [
+  [1, 1, 1, 1, 1],
+  [1, 1, 0, 1, 1],
+  [1, 1, 1, 1, 1],
+  [1, 0, 1, 1, 1],
+  [1, 1, 1, 1, 1],
+];
+
+function setZero(arr) {
+  let point = [];
+  for (let x = 0; x < arr.length; x++) {
+    for (let y = 0; y < arr.length; y++) {
+      if (arr[x][y] === 0) {
+        point.push({x, y});
+      }
+    }
+  }
+  point.forEach(item => {
+    arr[item.x].fill(0);
+    arr.forEach( (_, index) => {
+      arr[index][item.y] = 0;
+    });
+  });
+  return arr;
+}
+console.log(setZero(arr1));
+console.log(setZero(arr2));
+```
