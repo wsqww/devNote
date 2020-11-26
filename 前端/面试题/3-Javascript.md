@@ -240,3 +240,38 @@ function setZero(arr) {
 console.log(setZero(arr1));
 console.log(setZero(arr2));
 ```
+
+### 斐波那契数列
+
+```javascript
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+
+/**
+ * @description 求斐波那契数列第n项
+ * @param {number} n 项目数
+ * @return {number} 返回第n项值
+ */
+function fibonacci(n) {
+    let pre = 1;
+    let cur = 1;
+    let data;
+    if (n == 1 || n == 2) return 1;
+    for (let i = 3; i <= n; i++) {
+        data = pre + cur;
+        pre = cur;
+        cur = data;
+    }
+    return data;
+}
+
+/**
+ * @description 求斐波那契数列第n项
+ * @param {number} n 项目数
+ * @return {number} 返回第n项值
+ */
+function fibonacci(n, v1 = 1, v2 = 1) {
+    if (n == 1) return v1
+    if (n == 2) return v2
+    return fibonacci(n - 1, v2, v1 + v2)
+}
+```
