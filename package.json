@@ -4,7 +4,8 @@
   "description": "develop note",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
     "readme": "node script/readme.js"
   },
   "repository": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/wsqww/devNote/issues"
   },
-  "homepage": "https://github.com/wsqww/devNote#readme"
+  "homepage": "https://github.com/wsqww/devNote#readme",
+  "devDependencies": {
+    "vuepress": "^1.8.2"
+  }
 }
