@@ -48,3 +48,5 @@ Thumbs.db
 
 # 避免 GitHub 报错
 package-lock.json
+
+docs/.vuepress/dist
