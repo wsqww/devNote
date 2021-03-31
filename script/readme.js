@@ -7,8 +7,9 @@
 
 const fs = require('fs');
 const path = require('path');
-const projectPath = path.resolve(__dirname, '../');
-// console.log(__dirname, __filename, process.cwd(), path.resolve('./'), projectPath);
+const rootPath = path.resolve(__dirname, '../');
+const mdPath = '/Md/';
+// console.log(__dirname, __filename, process.cwd(), path.resolve('./'), rootPath);
 
 
 const ignoreDir = ['.history', '.git', 'README.md', 'favourite', 'script']; // 不用处理的 文件/文件夹
@@ -19,7 +20,7 @@ const mdToc = [
 ];
 const mdContent = [];
 
-getDirTree(projectPath);
+getDirTree(`${rootPath}${mdPath}`);
 
 creatMdText();
 
@@ -29,7 +30,7 @@ creatMdText();
  * @param {string} rootPath 新生成path的根路径
  * @param {number} deep 递归深度ß
  */
-function getDirTree(filePath, rootPath = '/', deep = 0) {
+function getDirTree(filePath, rootPath = mdPath, deep = 0) {
   const fileArr =  fs.readdirSync(filePath).sort((a, b) => {
     return getFileSortNum(a) - getFileSortNum(b);
   });
@@ -85,9 +86,10 @@ function creatMdText() {
     '\n\n',
     ...mdContent,
     `\n\n`,
-    `<sub style="color:#bcbcbc;">README.md内容由 '${__filename.replace(projectPath, '.')}' 执行写入</sub>`
+    `<sub style="color:#bcbcbc;">README.md内容由 '${__filename.replace(rootPath, '.')}' 执行写入</sub>`
   ];
-  fs.writeFile(path.resolve(projectPath, 'README.md'), mdText.join('\n'), (err) => {
+  // console.log(mdText); return;
+  fs.writeFile(path.resolve(rootPath, 'README.md'), mdText.join('\n'), (err) => {
     if (err) {
       console.log('写入失败！！');
       throw err
