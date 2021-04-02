@@ -24,13 +24,6 @@ export class AppModule { }
 #### 根模块
 ```typescript
 // '/src/app/app.module.ts'
-
-```
-
-
-#### 业务模块
-```typescript
-// '/src/app/routes/routes.module.ts'
 import { NgModule, ErrorHandler  } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -62,13 +55,12 @@ import { SharedModule } from '@shared/shared.module';
   bootstrap: [AppComponent],
 })
 export class AppModule { }
-
 ```
 
 
-#### 核心模块
+#### 业务模块
 ```typescript
-// '/src/app/core/core.module.ts'
+// '/src/app/routes/routes.module.ts'
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
@@ -112,6 +104,12 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class RoutesRoutingModule { }
+```
+
+
+#### 核心模块
+```typescript
+// '/src/app/core/core.module.ts'
 
 ```
 
