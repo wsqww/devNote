@@ -225,5 +225,4 @@ export class SharedModule { }
 - SharedModule 应该导出所有包含模块；
 - SharedModule 不应该 有providers属性；
 - Service 应该 承担应用的数据操作和数据交互；
-- Componen 应该 组织视图层的展示和服务计算数据的收集
-样式分层
+- Component 应该 组织视图层的展示和服务计算数据的收集样式分层

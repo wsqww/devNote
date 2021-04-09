@@ -18,6 +18,7 @@ module.exports = {
       },
       { title: 'Vue', path: '/Vue/' },
       { title: 'NodeJs',  path: '/NodeJs/' },
+      { title: 'LeetCode',  path: '/LeetCode/' },
     ]
   }
 }
