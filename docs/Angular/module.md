@@ -215,7 +215,7 @@ export class SharedModule { }
 
 ### 总结
 
-- AppModule 应该 导入 SharedModule、CoreModule、LayoutModule、RouterModule、Angular 模块(例如：- - - BrowserModule、BrowserAnimationsModule、HttpClientModule)；
+- AppModule 应该 导入 RouterModule、Angular 模块(例如：- - - BrowserModule、BrowserAnimationsModule、HttpClientModule)；
 - LayoutModule 应该 导入 SharedModule；
 - LayoutModule 应该 导出所有 layout component；
 - LayoutModule 不应该 导入和声明任何路由；
