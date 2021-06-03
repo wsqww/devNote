@@ -2,6 +2,9 @@ module.exports = {
   title: '开发笔记',
   description: '对开发和学习过程中遇到的问题进行记录总结',
   base: process.env.NODE_ENV === 'production' ? '/devNote/' : '/',
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
   // 侧边栏
   themeConfig: {
     // displayAllHeaders: true,
