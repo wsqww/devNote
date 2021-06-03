@@ -13,7 +13,8 @@ module.exports = {
         // path: '/Angular/',
         children: [
           { title: 'Angular搭建环境', path: '/Angular/' },
-          { title: '模块', path: '/Angular/module' }
+          { title: '模块', path: '/Angular/module' },
+          { title: '服务', path: '/Angular/service' }
         ]
       },
       { title: 'Vue', path: '/Vue/' },
