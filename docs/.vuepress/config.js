@@ -9,6 +9,7 @@ module.exports = {
   themeConfig: {
     // displayAllHeaders: true,
     sidebarDepth: 0,
+    lastUpdated: '更新于',
     sidebar: [
       { title: '介绍', path: '/' },
       {
@@ -17,12 +18,13 @@ module.exports = {
         children: [
           { title: 'Angular搭建环境', path: '/Angular/' },
           { title: '模块', path: '/Angular/module' },
-          { title: '服务', path: '/Angular/service' }
+          { title: '服务', path: '/Angular/service' },
+          { title: 'RxJs', path: '/Angular/rxjs' },
         ]
       },
       { title: 'Vue', path: '/Vue/' },
       { title: 'NodeJs',  path: '/NodeJs/' },
-      { title: 'LeetCode',  path: '/LeetCode/' },
+      { title: 'LeetCode',  path: '/LeetCode/' }
     ]
   }
 }
