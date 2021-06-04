@@ -3,7 +3,7 @@ module.exports = {
   description: '对开发和学习过程中遇到的问题进行记录总结',
   base: process.env.NODE_ENV === 'production' ? '/devNote/' : '/',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.png' }]
   ],
   // 侧边栏
   themeConfig: {
@@ -12,6 +12,7 @@ module.exports = {
     lastUpdated: '更新于',
     sidebar: [
       { title: '介绍', path: '/' },
+      { title: 'Nginx', path: '/Nginx/' },
       {
         title: 'Angular',
         // path: '/Angular/',
