@@ -19,6 +19,10 @@ module.exports = {
         children: [
           { title: 'Angular搭建环境', path: '/Angular/' },
           { title: '模块', path: '/Angular/module' },
+          { title: '组件', path: '/Angular/component' },
+          { title: '路由', path: '/Angular/route' },
+          { title: 'http请求', path: '/Angular/httpClient' },
+          { title: '请求拦截', path: '/Angular/interceptor' },
           { title: '服务', path: '/Angular/service' },
           { title: 'RxJs', path: '/Angular/rxjs' },
         ]

@@ -1,5 +1,7 @@
 ## 搭建项目
 
+angular相关内容可参考个人练习项目：[Angular8-dev](https://github.com/wsqww/Angular8-dev)
+
 ### 本地环境
 ```shell
 nodejs 10.9 + 
