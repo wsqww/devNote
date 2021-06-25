@@ -24,6 +24,8 @@ module.exports = {
           { title: 'http请求', path: '/Angular/httpClient' },
           { title: '请求拦截 Interceptor', path: '/Angular/interceptor' },
           { title: '服务 Service', path: '/Angular/service' },
+          { title: '环境变量 environment', path: '/Angular/environment' },
+          { title: '动态引入外部js', path: '/Angular/usejslink' },
           { title: 'RxJs', path: '/Angular/rxjs' },
         ]
       },
