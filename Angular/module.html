@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>module 模块 | 开发笔记</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/devNote/favicon.png">
+    <meta name="description" content="对开发和学习过程中遇到的问题进行记录总结">
+    
+    <link rel="preload" href="/devNote/assets/css/0.styles.1b5d81e9.css" as="style"><link rel="preload" href="/devNote/assets/js/app.e6c21b8d.js" as="script"><link rel="preload" href="/devNote/assets/js/2.018e3618.js" as="script"><link rel="preload" href="/devNote/assets/js/12.528bc801.js" as="script"><link rel="prefetch" href="/devNote/assets/js/10.dace84f7.js"><link rel="prefetch" href="/devNote/assets/js/11.49092ac3.js"><link rel="prefetch" href="/devNote/assets/js/13.6be36393.js"><link rel="prefetch" href="/devNote/assets/js/14.59c46027.js"><link rel="prefetch" href="/devNote/assets/js/15.c24e6a02.js"><link rel="prefetch" href="/devNote/assets/js/16.333efe20.js"><link rel="prefetch" href="/devNote/assets/js/17.e694272f.js"><link rel="prefetch" href="/devNote/assets/js/18.870788dd.js"><link rel="prefetch" href="/devNote/assets/js/19.aee760c6.js"><link rel="prefetch" href="/devNote/assets/js/20.56b8d66d.js"><link rel="prefetch" href="/devNote/assets/js/21.0270ad6d.js"><link rel="prefetch" href="/devNote/assets/js/22.7049a71a.js"><link rel="prefetch" href="/devNote/assets/js/23.a4b9ad5e.js"><link rel="prefetch" href="/devNote/assets/js/24.f5285bd5.js"><link rel="prefetch" href="/devNote/assets/js/25.0d514f13.js"><link rel="prefetch" href="/devNote/assets/js/26.c51e99c6.js"><link rel="prefetch" href="/devNote/assets/js/27.4d5ff21c.js"><link rel="prefetch" href="/devNote/assets/js/28.f9b68a18.js"><link rel="prefetch" href="/devNote/assets/js/29.8828963a.js"><link rel="prefetch" href="/devNote/assets/js/3.9c229156.js"><link rel="prefetch" href="/devNote/assets/js/30.04ae8c72.js"><link rel="prefetch" href="/devNote/assets/js/31.03390c86.js"><link rel="prefetch" href="/devNote/assets/js/32.7eb78965.js"><link rel="prefetch" href="/devNote/assets/js/33.6bd74a50.js"><link rel="prefetch" href="/devNote/assets/js/34.6a2c0c8f.js"><link rel="prefetch" href="/devNote/assets/js/35.720dd4de.js"><link rel="prefetch" href="/devNote/assets/js/4.99b4ad27.js"><link rel="prefetch" href="/devNote/assets/js/5.722902a6.js"><link rel="prefetch" href="/devNote/assets/js/6.b00d925a.js"><link rel="prefetch" href="/devNote/assets/js/7.73953b15.js"><link rel="prefetch" href="/devNote/assets/js/8.2e52036a.js"><link rel="prefetch" href="/devNote/assets/js/9.2d9c7ea9.js">
+    <link rel="stylesheet" href="/devNote/assets/css/0.styles.1b5d81e9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/devNote/" class="home-link router-link-active"><!----> <span class="site-name">开发笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/devNote/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/devNote/Nginx/" class="sidebar-link">Nginx</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Angular</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/devNote/Angular/" aria-current="page" class="sidebar-link">搭建环境</a></li><li><a href="/devNote/Angular/module.html" aria-current="page" class="active sidebar-link">模块 Module</a></li><li><a href="/devNote/Angular/component.html" class="sidebar-link">组件 Component</a></li><li><a href="/devNote/Angular/route.html" class="sidebar-link">路由 Route</a></li><li><a href="/devNote/Angular/httpClient.html" class="sidebar-link">http请求</a></li><li><a href="/devNote/Angular/interceptor.html" class="sidebar-link">请求拦截 Interceptor</a></li><li><a href="/devNote/Angular/service.html" class="sidebar-link">服务 Service</a></li><li><a href="/devNote/Angular/environment.html" class="sidebar-link">环境变量 environment</a></li><li><a href="/devNote/Angular/usejslink.html" class="sidebar-link">动态引入外部js</a></li><li><a href="/devNote/Angular/rxjs.html" class="sidebar-link">RxJs</a></li></ul></section></li><li><a href="/devNote/Vue/" class="sidebar-link">Vue</a></li><li><a href="/devNote/NodeJs/" class="sidebar-link">NodeJs</a></li><li><a href="/devNote/LeetCode/" class="sidebar-link">LeetCode</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="module-模块"><a href="#module-模块" class="header-anchor">#</a> module 模块</h2> <h4 id="文件基本结构"><a href="#文件基本结构" class="header-anchor">#</a> 文件基本结构</h4> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">//app.module.ts</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span>      <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  imports<span class="token operator">:</span>      <span class="token punctuation">[</span> BrowserModule <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  providers<span class="token operator">:</span>    <span class="token punctuation">[</span> Logger <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  declarations<span class="token operator">:</span> <span class="token punctuation">[</span> AppComponent <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  exports<span class="token operator">:</span>      <span class="token punctuation">[</span> AppComponent <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  bootstrap<span class="token operator">:</span>    <span class="token punctuation">[</span> AppComponent <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+</code></pre></div><ul><li>imports: 本模块声明的组件模板需要的类所在的其它模块。</li> <li>declarations: 声明本模块中拥有的视图类。Angular 有三种视图类：组件、指令和管道。</li> <li>exports: declarations 的子集，可用于其它模块的组件模板。</li> <li>bootstrap: 指定应用的主视图（称为根组件），它是所有其它视图的宿主。只有根模块才能设置 bootstrap 属性。</li> <li>providers: 服务的创建者，并加入到全局服务列表中，可用于应用任何部分。<em>（注意：<a href="https://angular.cn/guide/dependency-injection-providers#non-class-dependencies" target="_blank" rel="noopener noreferrer">DI提供者-预定义令牌与多提供者<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> ）</em></li></ul> <h4 id="根模块"><a href="#根模块" class="header-anchor">#</a> 根模块</h4> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// '/src/app/app.module.ts'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule<span class="token punctuation">,</span> ErrorHandler  <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> RouterModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/router'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 请求拦截器</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> httpInterceptorProviders <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@core'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> AppComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./app.component'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CoreModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@core/core.module'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> RoutesModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@routes/routes.module'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> LayoutModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@layout/layout.module'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> SharedModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shared/shared.module'</span><span class="token punctuation">;</span>
+
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  declarations<span class="token operator">:</span> <span class="token punctuation">[</span>
+    AppComponent<span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  imports<span class="token operator">:</span> <span class="token punctuation">[</span>
+    RouterModule<span class="token punctuation">,</span>
+
+    CoreModule<span class="token punctuation">,</span>
+    RoutesModule<span class="token punctuation">,</span>
+    LayoutModule<span class="token punctuation">,</span>
+    SharedModule<span class="token punctuation">,</span>
+
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  providers<span class="token operator">:</span> <span class="token punctuation">[</span>
+    httpInterceptorProviders<span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  bootstrap<span class="token operator">:</span> <span class="token punctuation">[</span>AppComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+</code></pre></div><h4 id="业务模块"><a href="#业务模块" class="header-anchor">#</a> 业务模块</h4> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// '/src/app/routes/routes.module.ts'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CommonModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/common'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserAnimationsModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser/animations'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> LayoutModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@layout/layout.module'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> SharedModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shared/shared.module'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> RoutesRoutingModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./routes-routing.module'</span><span class="token punctuation">;</span> <span class="token comment">// 路由配置</span>
+
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  declarations<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  imports<span class="token operator">:</span> <span class="token punctuation">[</span>
+    CommonModule<span class="token punctuation">,</span>
+    BrowserModule<span class="token punctuation">,</span>
+    BrowserAnimationsModule<span class="token punctuation">,</span>
+    LayoutModule<span class="token punctuation">,</span>
+    SharedModule<span class="token punctuation">,</span>
+    RoutesRoutingModule<span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  exports<span class="token operator">:</span> <span class="token punctuation">[</span>RoutesRoutingModule<span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">RoutesModule</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+<span class="token comment">// &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span>
+
+<span class="token comment">// '/src/app/core/core.module.ts'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Routes<span class="token punctuation">,</span> RouterModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/router'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> LoginComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./login/login.component'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> routes<span class="token operator">:</span> Routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span> path<span class="token operator">:</span> <span class="token string">'login'</span><span class="token punctuation">,</span> component<span class="token operator">:</span> LoginComponent <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> path<span class="token operator">:</span> <span class="token string">'index'</span><span class="token punctuation">,</span> <span class="token function-variable function">loadChildren</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./index/index.module'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>mod <span class="token operator">=&gt;</span> mod<span class="token punctuation">.</span>IndexModule<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 模块懒加载</span>
+  <span class="token punctuation">{</span> path<span class="token operator">:</span> <span class="token string">'project'</span><span class="token punctuation">,</span> <span class="token function-variable function">loadChildren</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'./projects/project/project.module'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>mod <span class="token operator">=&gt;</span> mod<span class="token punctuation">.</span>ProjectModule<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span> path<span class="token operator">:</span> <span class="token string">'**'</span><span class="token punctuation">,</span> redirectTo<span class="token operator">:</span> <span class="token string">'index'</span><span class="token punctuation">,</span> pathMatch<span class="token operator">:</span> <span class="token string">'full'</span> <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  imports<span class="token operator">:</span> <span class="token punctuation">[</span>RouterModule<span class="token punctuation">.</span><span class="token function">forRoot</span><span class="token punctuation">(</span>routes<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  exports<span class="token operator">:</span> <span class="token punctuation">[</span>RouterModule<span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">RoutesRoutingModule</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+</code></pre></div><h4 id="核心模块"><a href="#核心模块" class="header-anchor">#</a> 核心模块</h4> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// '/src/app/core/core.module.ts'</span>
+
+</code></pre></div><h4 id="布局模块"><a href="#布局模块" class="header-anchor">#</a> 布局模块</h4> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// '/src/app/layout/layout.module.ts'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CommonModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/common'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> SharedModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@shared/shared.module'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 布局组件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> HeaderComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./header/header.component'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CopyrightComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./copyright/copyright.component'</span><span class="token punctuation">;</span>
+
+
+
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  declarations<span class="token operator">:</span> <span class="token punctuation">[</span>
+    HeaderComponent<span class="token punctuation">,</span>
+    CopyrightComponent<span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  imports<span class="token operator">:</span> <span class="token punctuation">[</span>
+    CommonModule<span class="token punctuation">,</span>
+    SharedModule<span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  exports<span class="token operator">:</span> <span class="token punctuation">[</span>
+    HeaderComponent<span class="token punctuation">,</span>
+    CopyrightComponent<span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">LayoutModule</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="共享模块"><a href="#共享模块" class="header-anchor">#</a> 共享模块</h4> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// '/src/app/shared/shared.module.ts'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> CommonModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/common'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> RouterModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/router'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> FormsModule<span class="token punctuation">,</span> ReactiveFormsModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/forms'</span><span class="token punctuation">;</span> <span class="token comment">// 表单相关</span>
+
+<span class="token comment">// 工具组件</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ModalComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./utils/modal/modal.component'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> DropdownComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./utils/dropdown/dropdown.component'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> utilComponents <span class="token operator">=</span> <span class="token punctuation">[</span>
+  ModalComponent<span class="token punctuation">,</span>
+  DropdownComponent<span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 管道</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> SafeHTMLPipe <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./pipe/safe-html.pipe'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> SafeUrlPipe <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./pipe/safe-url.pipe'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> pipes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  SafeHTMLPipe<span class="token punctuation">,</span>
+  SafeUrlPipe<span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// directives</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ClickOutsideDirective <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./directives/click-outside.directive'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ClickPermissionDirective <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./directives/click-permission.directive'</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">const</span> directives <span class="token operator">=</span> <span class="token punctuation">[</span>
+  ClickOutsideDirective<span class="token punctuation">,</span>
+  ClickPermissionDirective<span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+@<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  declarations<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token operator">...</span>utilComponents<span class="token punctuation">,</span>
+    <span class="token operator">...</span>pipes<span class="token punctuation">,</span>
+    <span class="token operator">...</span>directives<span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  imports<span class="token operator">:</span> <span class="token punctuation">[</span>
+    CommonModule<span class="token punctuation">,</span>
+    RouterModule<span class="token punctuation">,</span>
+    FormsModule<span class="token punctuation">,</span>
+    ReactiveFormsModule<span class="token punctuation">,</span>
+    NgbModule<span class="token punctuation">,</span>
+    TranslateModule<span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  exports<span class="token operator">:</span> <span class="token punctuation">[</span>
+    RouterModule<span class="token punctuation">,</span>
+    NgbModule<span class="token punctuation">,</span>
+    FormsModule<span class="token punctuation">,</span>
+    ReactiveFormsModule<span class="token punctuation">,</span>
+    TranslateModule<span class="token punctuation">,</span>
+    <span class="token operator">...</span>utilComponents<span class="token punctuation">,</span>
+    <span class="token operator">...</span>pipes<span class="token punctuation">,</span>
+    <span class="token operator">...</span>directives<span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">SharedModule</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h3> <ul><li>AppModule 应该 导入 RouterModule、Angular 模块(例如：- - - BrowserModule、BrowserAnimationsModule、HttpClientModule)；</li> <li>LayoutModule 应该 导入 SharedModule；</li> <li>LayoutModule 应该 导出所有 layout component；</li> <li>LayoutModule 不应该 导入和声明任何路由；</li> <li>RouterModule 应该 导入 SharedModule、CoreModule、LayoutModule以及RouteRoutingModule；</li> <li>CoreModule 应该 只保留providers属性；</li> <li>SharedModule 应该 包含 Angular 通用模块(例如：CommonModule、FormsModule、RouterModule、ReactiveFormsModule)、第三方通用依赖模块、所有组件（自己写的非业务相关的通用组件）、指令、管道；</li> <li>SharedModule 应该导出所有包含模块；</li> <li>SharedModule 不应该 有providers属性；</li> <li>Service 应该 承担应用的数据操作和数据交互；</li> <li>Component 应该 组织视图层的展示和服务计算数据的收集样式分层</li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新于:</span> <span class="time">6/2/2021, 4:14:57 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/devNote/Angular/" class="prev router-link-active">
+        搭建环境
+      </a></span> <span class="next"><a href="/devNote/Angular/component.html">
+        组件 Component
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/devNote/assets/js/app.e6c21b8d.js" defer></script><script src="/devNote/assets/js/2.018e3618.js" defer></script><script src="/devNote/assets/js/12.528bc801.js" defer></script>
+  </body>
+</html>
