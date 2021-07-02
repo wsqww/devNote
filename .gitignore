@@ -50,3 +50,5 @@ Thumbs.db
 # package-lock.json
 
 docs/.vuepress/dist
+
+.history/
