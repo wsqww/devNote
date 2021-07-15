@@ -30,6 +30,13 @@ module.exports = {
         ]
       },
       { title: 'Vue', path: '/Vue/' },
+      { title: 'React', path: '/React/' },
+      {
+        title: 'Js Code',
+        children: [
+          { title: '手写代码', path: '/Javascript/手写代码.md' }
+        ]
+      },
       { title: 'NodeJs',  path: '/NodeJs/' },
       { title: 'LeetCode',  path: '/LeetCode/' }
     ]
