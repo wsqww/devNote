@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 10px;
+    }
+
+    .box,
+    .demo,
+    .demo2 {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+
+      transition: .5s;
+    }
+
+    .demo {
+      clip-path: polygon(50% 0, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+      animation: clip 1s linear infinite;
+    }
+
+    @keyframes clip {
+      0% {
+        clip-path: polygon(50% 0, 100% 38%, 82% 100%, 18% 100%, 0 38%);
+      }
+
+      25% {
+        clip-path: polygon(75% 0, 100% 69%, 65.5% 100%, 9% 100%, 0 19%);
+      }
+
+      50% {
+        clip-path: polygon(100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+      }
+
+      75% {
+        clip-path: polygon(100% 19%, 91% 100%, 34% 100%, 0 69%, 25% 0);
+      }
+
+      100% {
+        clip-path: polygon(100% 38%, 82% 100%, 18% 100%, 0 38%, 50% 0);
+      }
+    }
+
+    .demo2 {
+      clip-path: polygon(20% 0, 80% 0, 100% 50%, 80% 100%, 20% 100%, 0 50%);
+      animation: clip2 1s linear infinite;
+    }
+
+    @keyframes clip2 {
+      0% {
+        clip-path: polygon(20% 0, 80% 0, 100% 50%, 80% 100%, 20% 100%, 0 50%);
+      }
+
+      25% {
+        clip-path: polygon(35% 0, 90% 0, 100% 75%, 65% 100%, 10% 100%, 0 25%);
+      }
+
+      50% {
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+      }
+
+      75% {
+        clip-path: polygon(65% 0, 100% 25%, 90% 100%, 35% 100%, 0 75%, 10% 0);
+      }
+
+      100% {
+        clip-path: polygon(80% 0, 100% 50%, 80% 100%, 20% 100%, 0 50%, 20% 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box" style="clip-path: circle(40%);"></div>
+  <p>clip-path: circle(50%);</p>
+  <hr>
+  <div class="box" style="clip-path: ellipse(25% 50% at 25% 50%);"></div>
+  <p>clip-path: ellipse(25% 50% at 25% 50%);</p>
+  <hr>
+  <div class="box" style="clip-path: path('M 0 80 L 0,75 A 5,5 0,0,1 100,50 L 80 80 z');"></div>
+  <p>clip-path: path('M 0 80 L 0,75 A 5,5 0,0,1 100,50 L 80 80 z');</p>
+  <hr>
+  <div class="demo"></div>
+  <hr>
+  <div class="demo2"></div>
+</body>
+
+</html>

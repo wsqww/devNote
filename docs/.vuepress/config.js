@@ -34,11 +34,24 @@ module.exports = {
       {
         title: 'Js Code',
         children: [
-          { title: '手写代码', path: '/Javascript/手写代码.md' }
+          { title: '手写代码', path: '/Javascript/手写代码.md' },
+          { title: 'deepAssign', path: '/Javascript/deep-assign.md' },
         ]
       },
       { title: 'NodeJs',  path: '/NodeJs/' },
-      { title: 'LeetCode',  path: '/LeetCode/' }
+      { title: 'LeetCode',  path: '/LeetCode/' },
+      {
+        title: '其他',
+        // path: '/其他/',
+        children: [
+          { title: 'css: clip-path', path: '/其他/css_clip-path' },
+          { title: 'css 天气图标', path: '/其他/css_icon' },
+          { title: 'sso-Iframe示例', path: '/其他/sso-Iframe示例' }
+        ]
+      },
     ]
+  },
+  markdown: {
+    lineNumbers: true
   }
 }
