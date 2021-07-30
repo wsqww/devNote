@@ -9,7 +9,7 @@ module.exports = {
   themeConfig: {
     // displayAllHeaders: true,
     sidebarDepth: 0,
-    lastUpdated: '更新于',
+    lastUpdated: '上次更新',
     sidebar: [
       { title: '介绍', path: '/' },
       { title: 'Nginx', path: '/Nginx/' },
@@ -74,5 +74,6 @@ module.exports = {
   markdown: {
     lineNumbers: true,
     toc: { includeLevel: [3, 4] }
-  }
+  },
+  plugins: ['@vuepress/back-to-top']
 }
