@@ -1,6 +1,6 @@
 ## 开发学习笔记
 
-该项目主要使用 GitHub 三个功能
+该项目主要使用 GitHub 中的三个功能
 
 - Github page : 
   - 使用 **VuePress** 框架进行博客书写；
