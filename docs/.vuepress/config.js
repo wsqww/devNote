@@ -17,7 +17,7 @@ module.exports = {
         title: 'Angular',
         // path: '/Angular/',
         children: [
-          { title: '搭建环境', path: '/Angular/' },
+          { title: '搭建项目', path: '/Angular/' },
           { title: '模块 Module', path: '/Angular/module' },
           { title: '组件 Component', path: '/Angular/component' },
           { title: '路由 Route', path: '/Angular/route' },
@@ -29,29 +29,50 @@ module.exports = {
           { title: 'RxJs', path: '/Angular/rxjs' },
         ]
       },
-      { title: 'Vue', path: '/Vue/' },
+      {
+        title: 'Vue',
+        // path: '/Vue/',
+        children: [
+          { title: '搭建项目', path: '/Vue/' },
+          { title: '资源优化', path: '/Vue/资源优化' },
+        ]
+      },
       { title: 'React', path: '/React/' },
       {
         title: 'Js Code',
         children: [
-          { title: '手写代码', path: '/Javascript/手写代码.md' },
-          { title: 'deepAssign', path: '/Javascript/deep-assign.md' },
+          { title: '文件操作', path: '/Javascript/文件操作' },
+          { title: '手写代码', path: '/Javascript/手写代码' },
+          { title: 'deepAssign', path: '/Javascript/deep-assign' },
+          { title: 'audio播放器', path: '/Javascript/audio播放器' },
+          { title: '数组去重', path: '/Javascript/数组去重' },
+          { title: '懒加载', path: '/Javascript/懒加载' },
         ]
       },
-      { title: 'NodeJs',  path: '/NodeJs/' },
+      {
+        title: 'NodeJs',
+        // path: '/NodeJs/',
+        children: [
+          { title: '终端完整打印obj',  path: '/NodeJs/终端打印obj' },
+          { title: '终端显示提示选项',  path: '/NodeJs/终端提示' },
+          { title: '文件操作',  path: '/NodeJs/文件操作' },
+        ]
+      },
       { title: 'LeetCode',  path: '/LeetCode/' },
       {
-        title: '其他',
+        title: '其他(html,css)',
         // path: '/其他/',
         children: [
           { title: 'css: clip-path', path: '/其他/css_clip-path' },
           { title: 'css 天气图标', path: '/其他/css_icon' },
-          { title: 'sso-Iframe示例', path: '/其他/sso-Iframe示例' }
+          { title: 'sso-Iframe示例', path: '/其他/sso-Iframe示例' },
+          { title: 'css片段', path: '/其他/css片段' },
         ]
       },
     ]
   },
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    toc: { includeLevel: [3, 4] }
   }
 }

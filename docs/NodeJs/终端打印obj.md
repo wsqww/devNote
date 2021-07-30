@@ -1,6 +1,8 @@
+## util包 
 
-### util包
-```node
+使用 util 可以在终端 打印完整 object，方便开发
+
+```js
 const util = require('util');
 // 终端 完整打印出对象
 // showHidden 在格式化结果中包含对象的非枚举符号和属性。 还包括 WeakMap 和 WeakSet 条目以及用户定义的原型属性(不包括方法属性)。 默认值: false

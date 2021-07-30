@@ -6,8 +6,7 @@
   "license": "ISC",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "readme": "node script/readme.js"
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",

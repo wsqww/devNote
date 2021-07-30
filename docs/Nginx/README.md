@@ -1,5 +1,7 @@
 ## Nginx
 
+[[toc]]
+
 ### 安装（mac）
 
 ```bash
