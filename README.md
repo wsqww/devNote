@@ -2,6 +2,11 @@
 
 该项目主要使用 GitHub 三个功能
 
-- github page : 使用 vuepress 框架进行博客书写，源码在 master 分支，静态页面通过 workflow 自动构建到 gh-page 分支，使用 githubPage 展示；
+- Github page : 
+  - 使用 **VuePress** 框架进行博客书写；
+  - 源码在 **master** 分支；
+  - 通过 **workflow** 自动构建 **静态页面** 到 **gh-pages** 分支；
+  - 使用 **github page** 展示；
+  - [点击查看](https://wsqww.github.io/devNote/%E5%85%B6%E4%BB%96/css_icon.html);
 - Issues : 面试题汇总记录 并进行解析；
-- Project : 对 Issues 进行分类管理；
+- Project : 对 **Issues** 中问题进行分类管理；
