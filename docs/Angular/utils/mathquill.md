@@ -48,6 +48,7 @@ npm install ngx-mathquill
 2. 引入 mathquill 样式文件
 
 angular.json
+
 ```json
 {
   ...
@@ -63,6 +64,7 @@ angular.json
 1. 页面中使用
 
 component.ts
+
 ```js
 import { MathQuillLoader } from 'ngx-mathquill'
 MathQuillLoader.loadMathQuill(mathquill => {
