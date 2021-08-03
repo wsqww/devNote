@@ -41,7 +41,7 @@ npm install @types/jquery
 
 1. 安装 npm 包
 
-```dash
+```bash
 npm install ngx-mathquill
 ```
 
