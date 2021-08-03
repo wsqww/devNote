@@ -46,8 +46,8 @@ npm install ngx-mathquill
 ```
 
 2. 引入 mathquill 样式文件
-   angular.json
 
+angular.json
 ```json
 {
   ...
@@ -60,15 +60,14 @@ npm install ngx-mathquill
 }
 ```
 
-3. 页面中使用
-   component.ts
+1. 页面中使用
 
+component.ts
 ```js
-import { MathQuillLoader } from "ngx-mathquill";
-MathQuillLoader.loadMathQuill((mathquill) => {
+import { MathQuillLoader } from 'ngx-mathquill'
+MathQuillLoader.loadMathQuill(mathquill => {
   // do what you want here
   // for example:
-  console.log(mathquill.getInterface(2));
-});
+  console.log(mathquill.getInterface(2))
+})
 ```
-
