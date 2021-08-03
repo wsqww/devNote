@@ -14,7 +14,7 @@
 
 ```bash
 npm install jquery --save
-npm install @types/jquery //
+npm install @types/jquery
 ```
 
 2. tsconfig.json
