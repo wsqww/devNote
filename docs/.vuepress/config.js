@@ -28,6 +28,12 @@ module.exports = {
           { title: '环境变量 environment', path: '/Angular/environment' },
           { title: '动态引入外部js', path: '/Angular/usejslink' },
           { title: 'RxJs', path: '/Angular/rxjs' },
+          {
+            title: '插件工具', path: '/Angular/utils/',
+            children: [
+              { title: 'mathquill', path: '/Angular/utils/mathquill' }
+            ]
+          },
         ]
       },
       {
