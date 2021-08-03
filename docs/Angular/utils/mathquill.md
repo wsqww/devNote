@@ -61,7 +61,7 @@ angular.json
 }
 ```
 
-1. 页面中使用
+3. 页面中使用
 
 component.ts
 
