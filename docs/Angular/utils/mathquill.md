@@ -70,6 +70,9 @@ import { MathQuillLoader } from 'ngx-mathquill'
 MathQuillLoader.loadMathQuill(mathquill => {
   // do what you want here
   // for example:
-  console.log(mathquill.getInterface(2))
+  // console.log(mathquill.getInterface(2));
+  const MQ = mathquill.getInterface(2);
+  const box = document.getElementById('box');
+  MQ.StaticMath(box);;
 })
 ```
