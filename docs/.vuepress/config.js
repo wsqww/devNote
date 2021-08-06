@@ -8,6 +8,9 @@ module.exports = {
   ],
   // 侧边栏
   themeConfig: {
+    nav: [
+      { text: 'Github', link: 'https://github.com/wsqww/devNote' }
+    ],
     // displayAllHeaders: true,
     sidebarDepth: 0,
     lastUpdated: '上次更新',
