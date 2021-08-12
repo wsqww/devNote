@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex order</title>
+  <style>
+    ul {
+      display: flex;
+      list-style: none;
+    }
+    ul>li {
+      flex: 1;
+      width: 100px;
+      text-align: center;
+      margin: 10px;
+      background-color: #eee;
+    }
+    ul.order>li:nth-child(1) {
+      order: 1;
+    }
+    ul.order>li:nth-child(2) {
+      order: 2;
+    }
+    ul.order>li:nth-child(3) {
+      order: -1;
+    }
+    ul.order>li:nth-child(4) {
+      order: 4;
+    }
+    ul.column {
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+  <ul class="order">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+  <ul class="order column">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</body>
+</html>
