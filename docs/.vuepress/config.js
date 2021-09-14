@@ -68,7 +68,14 @@ module.exports = {
           { title: '文件操作',  path: '/NodeJs/文件操作' },
         ]
       },
-      { title: 'LeetCode',  path: '/LeetCode/' },
+      {
+        title: 'LeetCode',
+        // path: '/LeetCode/',
+        children: [
+          { title: '练习', path: '/LeetCode/test/' },
+          { title: '剑指Offer', path: '/LeetCode/offer/' },
+        ]
+      },
       {
         title: '其他(html,css)',
         // path: '/其他/',
