@@ -113,7 +113,6 @@ Rxjs 中的数据流可能包含复杂的功能，但是可以分解成一个个
   // 将过往的值收集到一个数组中，并且仅当另一个 Observable 发出通知时才发出此数组。这相当于有一个缓冲区，将数据收集起来，等到一个信号来临，再释放出去。
   mBuffer() {
     const source = interval(500);
-    this.obsSub(source, 'buffer source');
     const click = fromEvent(document.getElementById('bufferEnd'), 'click');
     const result = source.pipe( buffer(click) );
     source.subscribe((x) => console.log('buffer', x));
