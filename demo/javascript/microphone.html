@@ -11,12 +11,14 @@
     #box {
       height: 100px;
       display: flex;
-      background-color: #eeeeee;
+      align-items: center;
+      background-color: #efefef;
     }
     #box>span {
-      flex: 1;
-      max-width: 10px;
-      height: 0;
+      /* flex: 1; */
+      width: 10px;
+      min-height: 1px;
+      border-radius: 2px;
       background-color: #000000;
     }
   </style>
@@ -30,9 +32,7 @@
   <br>
   <br>
   <!-- <canvas id="oscilloscope" style="width: 600px; height: 200px;"></canvas> -->
-  <div id="box">
-    <!-- <span></span> -->
-  </div>
+  <div id="box"></div>
 
   <script>
     let logIng = false;
@@ -41,7 +41,7 @@
     let audioContext = null;
     let mediaStreamSource = null;
     let scriptProcessor = null;
-    console.log(audioContext);
+    // console.log(audioContext);
     function detectDevice() {
       audioContext = new AudioContext();
       if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
@@ -71,17 +71,20 @@
               // console.log(logIng, height);
               if(logIng) {
                 const span = document.createElement('span');
-                console.log(height);
+                // console.log(height);
                 span.style.height = `${height}px`;
                 box.appendChild(span)
               }
             };
           })
           .catch((err) => {
-            console.log('授权失败！')
+            const tip = '麦克风授权失败！';
+            alert(tip);
+            throw Error(tip);
           });
       } else {
-        console.lgo('浏览器不支持！')
+        alert('麦克风已禁用，或浏览器不支持此功能，请到浏览器设置中查看。');
+        throw Error('浏览器不支持此功能！');
       }
     }
 
@@ -99,47 +102,6 @@
       }
     }
   </script>
-
-
-  <!-- <script>
-    const box = document.getElementById('box');
-    // let audioContext = new (window.AudioContext || window.webkitAudioContext)();
-    let recorder = null;
-    console.log(recorder);
-    function detectDevice() {
-      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        // 获取用户的 media 信息
-        navigator.mediaDevices.getUserMedia({ audio: true })
-          .then((stream) => {
-            console.log(stream);
-            recorder = new MediaRecorder(stream);
-            console.log(recorder);
-            recorder.ondataavailable =  function (e) {
-              // console.log(e.data.arrayBuffer());
-              e.data.arrayBuffer().then(res => {
-                console.log(res);
-                console.log(Math.max.apply(Math, res));
-              });
-              // console.log(new Blob(e.data, { 'type' : 'audio/webm;codecs=opus' }));
-            }
-            recorder.start(1000);
-          })
-          .catch((err) => {
-            console.log('授权失败！')
-          });
-      } else {
-        console.lgo('浏览器不支持！')
-      }
-    }
-
-    function closeMicro() {
-      console.log('close =>>>>');
-      if(recorder!== null) {
-        recorder.stop();
-        recorder = null;
-      }
-    }
-  </script> -->
 
 </body>
 
