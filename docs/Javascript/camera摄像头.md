@@ -6,7 +6,8 @@
 
 
 #### 效果
-<iframe style="width: 100%; height: 350px; border: 1px solid #ccc;" allowfullscreen="true" :src="$withBase('/demo/javascript/camera.html')"></iframe>
+<br>
+<iframe style="width: 100%; height: 420px; border: 1px solid #ccc;" allowfullscreen="true" :src="$withBase('/demo/javascript/camera.html')"></iframe>
 
 #### 代码
 <<< @/docs/.vuepress/public/demo/javascript/camera.html
