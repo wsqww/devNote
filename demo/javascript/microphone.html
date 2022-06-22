@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>麦克风</title>
+
+  <style>
+    #box {
+      height: 100px;
+      display: flex;
+      background-color: #eeeeee;
+    }
+    #box>span {
+      flex: 1;
+      max-width: 10px;
+      height: 0;
+      background-color: #000000;
+    }
+  </style>
+
+</head>
+<!-- https://dev.eztest.org/monitor/session/3458/#/ -->
+<body>
+  <h2>麦克风 声波曲线</h2>
+  <button onclick="detectDevice()">授权 & 采集</button>
+  <button onclick="closeMicro()">关闭</button>
+  <br>
+  <br>
+  <!-- <canvas id="oscilloscope" style="width: 600px; height: 200px;"></canvas> -->
+  <div id="box">
+    <!-- <span></span> -->
+  </div>
+
+  <script>
+    let logIng = false;
+    const box = document.getElementById('box');
+    // let audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    let audioContext = null;
+    let mediaStreamSource = null;
+    let scriptProcessor = null;
+    console.log(audioContext);
+    function detectDevice() {
+      audioContext = new AudioContext();
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        // 获取用户的 media 信息
+        navigator.mediaDevices.getUserMedia({ audio: true })
+          .then((stream) => {
+            console.log(stream);
+            // 将麦克风的声音输入这个对象
+            mediaStreamSource = audioContext.createMediaStreamSource(stream);
+            // 创建一个音频分析对象，采样的缓冲区大小为4096，输入和输出都是单声道
+            scriptProcessor = audioContext.createScriptProcessor(2048,1,1); // 0, 256, 512, 1024, 2048, 4069, 8192, 16384
+            // 将该分析对象与麦克风音频进行连接
+            mediaStreamSource.connect(scriptProcessor);
+            // 此举无甚效果，仅仅是因为解决 Chrome 自身的 bug
+            scriptProcessor.connect(audioContext.destination);
+
+            console.log(scriptProcessor);
+            logIng = true;
+            // 开始处理音频
+            scriptProcessor.onaudioprocess = function(e) {
+              // 获得缓冲区的输入音频，转换为包含了PCM通道数据的32位浮点数组
+              let buffer = e.inputBuffer.getChannelData(0);
+              // 获取缓冲区中最大的音量值
+              let maxVal = Math.max.apply(Math, buffer);
+              // console.log(e, buffer, maxVal);
+              const height = Math.round(maxVal*100);
+              // console.log(logIng, height);
+              if(logIng) {
+                const span = document.createElement('span');
+                console.log(height);
+                span.style.height = `${height}px`;
+                box.appendChild(span)
+              }
+            };
+          })
+          .catch((err) => {
+            console.log('授权失败！')
+          });
+      } else {
+        console.lgo('浏览器不支持！')
+      }
+    }
+
+    function closeMicro() {
+      // console.log('close =>>>>');
+      if(audioContext!== null) {
+        audioContext.close()
+        .then(() => {
+          console.log('close =>>>>');
+          logIng = false;
+          mediaStreamSource.disconnect();
+          scriptProcessor.disconnect();
+          audioContext = null;
+        });
+      }
+    }
+  </script>
+
+
+  <!-- <script>
+    const box = document.getElementById('box');
+    // let audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    let recorder = null;
+    console.log(recorder);
+    function detectDevice() {
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        // 获取用户的 media 信息
+        navigator.mediaDevices.getUserMedia({ audio: true })
+          .then((stream) => {
+            console.log(stream);
+            recorder = new MediaRecorder(stream);
+            console.log(recorder);
+            recorder.ondataavailable =  function (e) {
+              // console.log(e.data.arrayBuffer());
+              e.data.arrayBuffer().then(res => {
+                console.log(res);
+                console.log(Math.max.apply(Math, res));
+              });
+              // console.log(new Blob(e.data, { 'type' : 'audio/webm;codecs=opus' }));
+            }
+            recorder.start(1000);
+          })
+          .catch((err) => {
+            console.log('授权失败！')
+          });
+      } else {
+        console.lgo('浏览器不支持！')
+      }
+    }
+
+    function closeMicro() {
+      console.log('close =>>>>');
+      if(recorder!== null) {
+        recorder.stop();
+        recorder = null;
+      }
+    }
+  </script> -->
+
+</body>
+
+</html>

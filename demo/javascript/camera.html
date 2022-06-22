@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>摄像头</title>
+</head>
+
+<body>
+  <video id="video" src="" autoplay style="width: 500px; height: 300px; background-color: #000000;"></video>
+  <br>
+  <button onclick="useCamera()">调用摄像头</button>
+
+  <script>
+    const videoElm = document.getElementById('video');
+    console.log(videoElm);
+    function useCamera() {
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+          .then((stream) => {
+            console.log(stream);
+            const videoTracks = stream.getVideoTracks();
+            console.log(videoTracks);
+            videoElm.srcObject = stream;
+          })
+          .catch((err) => {
+            const tip = '摄像头授权失败！';
+            alert(tip);
+            throw Error(tip);
+          });
+      } else {
+        alert('摄像头已禁用，或浏览器不支持此功能，请到浏览器设置中查看。');
+        throw Error('浏览器不支持此功能！');
+      }
+    }
+  </script>
+</body>
+
+</html>
