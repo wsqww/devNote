@@ -1,0 +1,12 @@
+## 摄像头
+
+主要使用：
+- **navigator.mediaDevices.getUserMedia**
+- **getVideoTracks**
+
+
+#### 效果
+<iframe style="width: 100%; height: 350px; border: 1px solid #ccc;" allowfullscreen="true" :src="$withBase('/demo/javascript/camera.html')"></iframe>
+
+#### 代码
+<<< @/docs/.vuepress/public/demo/javascript/camera.html
