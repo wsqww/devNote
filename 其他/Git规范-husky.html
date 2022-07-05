@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git 规范 | 开发笔记</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.png">
+    <meta name="description" content="对开发和学习过程中遇到的问题进行记录总结。">
+    
+    <link rel="preload" href="/assets/css/0.styles.b4c82722.css" as="style"><link rel="preload" href="/assets/js/app.5af2cf8f.js" as="script"><link rel="preload" href="/assets/js/2.57f8276c.js" as="script"><link rel="preload" href="/assets/js/56.4237f295.js" as="script"><link rel="prefetch" href="/assets/js/10.f1435f9e.js"><link rel="prefetch" href="/assets/js/11.d08846fb.js"><link rel="prefetch" href="/assets/js/12.a95f7068.js"><link rel="prefetch" href="/assets/js/13.e7ca452d.js"><link rel="prefetch" href="/assets/js/14.c5694acd.js"><link rel="prefetch" href="/assets/js/15.755e2926.js"><link rel="prefetch" href="/assets/js/16.c8e65286.js"><link rel="prefetch" href="/assets/js/17.9175c6de.js"><link rel="prefetch" href="/assets/js/18.71fc76a1.js"><link rel="prefetch" href="/assets/js/19.8f87462f.js"><link rel="prefetch" href="/assets/js/20.ca05b6c9.js"><link rel="prefetch" href="/assets/js/21.2c78db0b.js"><link rel="prefetch" href="/assets/js/22.5f5fc6c8.js"><link rel="prefetch" href="/assets/js/23.c8d9af8a.js"><link rel="prefetch" href="/assets/js/24.29198fea.js"><link rel="prefetch" href="/assets/js/25.ab6bee82.js"><link rel="prefetch" href="/assets/js/26.c6785cf4.js"><link rel="prefetch" href="/assets/js/27.cac20413.js"><link rel="prefetch" href="/assets/js/28.a96407a3.js"><link rel="prefetch" href="/assets/js/29.ddb5bd2f.js"><link rel="prefetch" href="/assets/js/3.66258c69.js"><link rel="prefetch" href="/assets/js/30.b46373e5.js"><link rel="prefetch" href="/assets/js/31.70c56a53.js"><link rel="prefetch" href="/assets/js/32.663b817c.js"><link rel="prefetch" href="/assets/js/33.1e15a386.js"><link rel="prefetch" href="/assets/js/34.910537c2.js"><link rel="prefetch" href="/assets/js/35.ca7ce753.js"><link rel="prefetch" href="/assets/js/36.22e29bdd.js"><link rel="prefetch" href="/assets/js/37.654b92f9.js"><link rel="prefetch" href="/assets/js/38.b850dec4.js"><link rel="prefetch" href="/assets/js/39.00ce82d8.js"><link rel="prefetch" href="/assets/js/4.4917711d.js"><link rel="prefetch" href="/assets/js/40.26a33b12.js"><link rel="prefetch" href="/assets/js/41.80919a14.js"><link rel="prefetch" href="/assets/js/42.fd3826e6.js"><link rel="prefetch" href="/assets/js/43.e79f011c.js"><link rel="prefetch" href="/assets/js/44.e06a5f64.js"><link rel="prefetch" href="/assets/js/45.2d9b2a6c.js"><link rel="prefetch" href="/assets/js/46.ec22246a.js"><link rel="prefetch" href="/assets/js/47.158e5450.js"><link rel="prefetch" href="/assets/js/48.08ba8478.js"><link rel="prefetch" href="/assets/js/49.7217e447.js"><link rel="prefetch" href="/assets/js/5.770925b5.js"><link rel="prefetch" href="/assets/js/50.02902b67.js"><link rel="prefetch" href="/assets/js/51.9af8b34f.js"><link rel="prefetch" href="/assets/js/52.dc50a5ef.js"><link rel="prefetch" href="/assets/js/53.fd0fd153.js"><link rel="prefetch" href="/assets/js/54.b7685ed4.js"><link rel="prefetch" href="/assets/js/55.50a8febe.js"><link rel="prefetch" href="/assets/js/57.2e68e202.js"><link rel="prefetch" href="/assets/js/58.468bc236.js"><link rel="prefetch" href="/assets/js/59.455de816.js"><link rel="prefetch" href="/assets/js/6.69baa9dd.js"><link rel="prefetch" href="/assets/js/60.fba78e11.js"><link rel="prefetch" href="/assets/js/61.fbf921ba.js"><link rel="prefetch" href="/assets/js/7.65ca3c3c.js"><link rel="prefetch" href="/assets/js/8.a3fb0ec2.js"><link rel="prefetch" href="/assets/js/9.6146a626.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b4c82722.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/favicon.png" alt="开发笔记" class="logo"> <span class="site-name can-hide">开发笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  笔记
+</a></div><div class="nav-item"><a href="/Face/" class="nav-link">
+  题目
+</a></div><div class="nav-item"><a href="https://github.com/wsqww/devNote" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  笔记
+</a></div><div class="nav-item"><a href="/Face/" class="nav-link">
+  题目
+</a></div><div class="nav-item"><a href="https://github.com/wsqww/devNote" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/Nginx/" class="sidebar-link">Nginx</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Angular</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/React/" class="sidebar-link">React</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Js Code</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>NodeJs</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>LeetCode</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>其他</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/其他/css_clip-path.html" class="sidebar-link">css: clip-path</a></li><li><a href="/其他/css_icon.html" class="sidebar-link">css 天气图标</a></li><li><a href="/其他/sso-Iframe示例.html" class="sidebar-link">sso-Iframe示例</a></li><li><a href="/其他/css片段.html" class="sidebar-link">css片段</a></li><li><a href="/其他/flex_order.html" class="sidebar-link">css改变dom排序</a></li><li><a href="/其他/Git规范-husky.html" class="active sidebar-link">Git规范-husky</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git-规范"><a href="#git-规范" class="header-anchor">#</a> git 规范</h1> <h1 id="本项目使用的插件及说明"><a href="#本项目使用的插件及说明" class="header-anchor">#</a> 本项目使用的插件及说明</h1> <h2 id="husky-和-commitlint"><a href="#husky-和-commitlint" class="header-anchor">#</a> husky 和 commitlint</h2> <ol><li><p>安装 <code>husky</code></p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">npm</span> <span class="token function">install</span> -D husky
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>修改 <code>package.json</code> 中的 script</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;prepare&quot;</span><span class="token operator">:</span> <span class="token string">&quot;husky install&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>修改后，执行 <code>npm run prepare</code>，会在根目录生成文件夹 <code>.husky</code>;</p> <p>执行 <code>npx husky add .husky/commit-msg ''</code>;
+此命令 会在 <code>.husky</code> 文件 创建文件 <code>commit-msg</code>，修改最后一行：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#!/usr/bin/env sh
+. &quot;$(dirname -- &quot;$0&quot;)/_/husky.sh&quot;
+
+#--no-install 参数表示强制npx使用项目中node_modules目录中的commitlint包
+npx --no-install commitlint --edit $1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li> <li><p>安装 <code>commitlint</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>npm install -D @commitlint/cli @commitlint/config-conventional
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>在根目录创建文件 <code>commitlint.config.js</code> 并添加配置，参考 <a href="https://github.com/conventional-changelog/commitlint/blob/master/docs/reference-rules.md" target="_blank" rel="noopener noreferrer">commitlint 配置<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>;</p></li> <li><p>正常提交代码 即可使用</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit -m <span class="token string">'commit test'</span>
+
+⧗   input: commit <span class="token builtin class-name">test</span>
+✖   <span class="token builtin class-name">type</span> may not be empty <span class="token punctuation">[</span>type-empty<span class="token punctuation">]</span>
+✖   subject may not be empty <span class="token punctuation">[</span>subject-empty<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></li></ol> <h2 id="customizable-交互式操作"><a href="#customizable-交互式操作" class="header-anchor">#</a> customizable 交互式操作</h2> <ol><li><p>安装 customizable</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>npm install -D commitizen cz-conventional-changelog commitlint-config-cz cz-customizable
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>修改 <code>package.json</code> 中的 scripts</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span><span class="token punctuation">{</span>
+    commit<span class="token operator">:</span><span class="token string">&quot;git-cz&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>修改 <code>package.json</code> 中的 config</p> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token comment">// 使用自定义规范则使用</span>
+<span class="token punctuation">{</span>
+  <span class="token property">&quot;config&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;commitizen&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node_modules/cz-customizable&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 或者</span>
+  <span class="token property">&quot;config&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;cz-customizable&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">// 可以对.cz-config.js 进行重命名</span>
+      <span class="token property">&quot;config&quot;</span><span class="token operator">:</span> <span class="token string">&quot;config/config.js&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div></li> <li><p>在根目录创建文件 <code>.cz-config.js</code>
+添加配置项，参考 <a href="https://github.com/leoforfree/cz-customizable/blob/master/cz-config-EXAMPLE.js" target="_blank" rel="noopener noreferrer">customizable 配置<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>；
+修改 <code>commitlint.config.js</code> 的 extents 中 增加 'cz'；</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token literal-property property">extents</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'@commitlint/config-conventional'</span><span class="token punctuation">,</span> <span class="token string">'cz'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>提交代码</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git add .
+npm run commit
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>根据提示 填写内容，<code>enter</code> 可跳过</p></li></ol> <p><br><br><br><br><br><br></p> <h1 id="commit-message"><a href="#commit-message" class="header-anchor">#</a> commit message</h1> <h2 id="说明"><a href="#说明" class="header-anchor">#</a> 说明</h2> <p>一个完整的 commit message 应该包含三个部分:</p> <ul><li>header</li> <li>body</li> <li>footer</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code># header
+feat(dao): add db utils
+# body
+- describe for util1
+- describe for util2
+see trello 看板卡片
+# footer
+BREAKING CHANGE:...
+
+
+
+&lt;type&gt;(&lt;scope&gt;):&lt;subject&gt;
+&lt;body&gt;
+&lt;footer&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="header"><a href="#header" class="header-anchor">#</a> header</h3> <p>header 只有一行,由三部分组成:
+<code>&lt;type&gt;(&lt;scope&gt;):&lt;subject&gt;</code></p> <h4 id="type"><a href="#type" class="header-anchor">#</a> type</h4> <p>说明提交的类别,只允许使用下面的类型.</p> <h4 id="type可选值"><a href="#type可选值" class="header-anchor">#</a> <strong>type可选值</strong></h4> <ul><li>feat <em>新功能(feature)</em></li> <li>fix <em>用于修复问题</em></li> <li>docs <em>文档</em></li> <li>style <em>修改格式(不影响代码运行的变动)</em></li> <li>refactor <em>重构</em></li> <li>perf <em>优化相关</em></li> <li>test <em>增加测试用例</em></li> <li>revert <em>回滚</em></li> <li>merge <em>合并代码</em></li> <li>chore <em>构建过程或辅助工具的变动 如 CI CD</em></li></ul> <h4 id="scope-可选"><a href="#scope-可选" class="header-anchor">#</a> scope(可选)</h4> <p>是可选的,用于说明此次提交影响范围</p> <h4 id="subject"><a href="#subject" class="header-anchor">#</a> subject</h4> <p>对提交的简短描述,不超过50字符
+<strong>规范</strong>
+动词使用第一人称现在时.如 fix 而不是 fixed,add 而不是 added.
+首字母小写.
+结尾不需要句号.</p> <h3 id="body-可选"><a href="#body-可选" class="header-anchor">#</a> body(可选)</h3> <p>body 是可选的,更详细的描述,对于简单的提交也可缺省
+<em>规范</em>
+动词使用第一人称现在时.如 fix 而不是 fixed,add 而不是 added.
+用换行分割信息
+说明动机和修改前后对比</p> <h3 id="footer-可选"><a href="#footer-可选" class="header-anchor">#</a> footer(可选)</h3> <p>对于不兼容的变更,footer以 <code>BREAKING CHANGE</code> 开头.
+后面是变动描述,理由等.</p> <h3 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h3> <p><em>vue 项目(同样使用AngularJS规范)里的 git commit message</em></p> <div class="language- extra-class"><pre><code>feat(reactivity): `proxyRefs` method and `ShallowUnwrapRefs` type (#1682)
+BREAKING CHANGE: template auto ref unwrapping are now applied shallowly,
+i.e. only at the root level. See https://github.com/vuejs/vue-next/pull/1682 for more details.
+
+
+fix(hmr): should update el for `HYDRATE_EVENTS` patchFlags node (#1707)
+fix https://github.com/vitejs/vite/issues/613
+
+
+refactor(runtime-core): adjust error handling behavior
+- Crash in dev to make the errors more noticeable
+- Recover in prod to reduce impact on end users
+</code></pre></div><h1 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h1> <ul><li><a href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank" rel="noopener noreferrer">https://www.conventionalcommits.org/en/v1.0.0/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://developers.google.com/blockly/guides/modify/contribute/commits" target="_blank" rel="noopener noreferrer">https://developers.google.com/blockly/guides/modify/contribute/commits<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines" target="_blank" rel="noopener noreferrer">https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">7/5/2022, 8:04:05 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/其他/flex_order.html" class="prev">
+        css改变dom排序
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.5af2cf8f.js" defer></script><script src="/assets/js/2.57f8276c.js" defer></script><script src="/assets/js/56.4237f295.js" defer></script>
+  </body>
+</html>
