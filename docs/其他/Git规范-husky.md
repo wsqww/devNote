@@ -21,7 +21,7 @@
 
    执行 `npx husky add .husky/commit-msg ''`;
 
-   此命令 会在 `.husky` 文件 创建文件 `commit-msg`，修改最后一行：
+   此命令 会在 `.husky` 文件夹 创建文件 `commit-msg`，修改最后一行：
    ```
    #!/usr/bin/env sh
    . "$(dirname -- "$0")/_/husky.sh"
