@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      width: 100%;
+      height: 100%;
+      font-size: 30px;
+    }
+    .box img {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div id="scrollText">滚动：0</div>
+    <img id="target" src="https://cdn.cnbj1.fds.api.mi-img.com/product-images/mi-f2a1-cond8f0c2c2/section-10-item_0.jpg">
+    <!-- https://cdn.cnbj1.fds.api.mi-img.com/product-images/mi-f2a1-cond8f0c2c2/section-10-item_39.jpg -->
+  </div>
+
+  <script>
+    const scale = 30;
+    let num = 0;
+    const scrollText = document.getElementById('scrollText');
+    const targetImg = document.getElementById('target');
+    targetImg.onwheel = function(event) {
+      // console.log(event.deltaY, Math.round(event.deltaY));
+      num += Math.round(event.deltaY);
+      let imgNum = Math.round(num/scale);
+      if( imgNum < 0 ) {
+        imgNum = 0;
+        num = 0;
+      }
+      if( imgNum > 39 ) {
+        imgNum = 39;
+        num = 39 * scale;
+      }
+      // console.log(imgNum);
+      scrollText.innerHTML = `滚动：${num}, img: ${imgNum}`;
+      targetImg.src = `https://cdn.cnbj1.fds.api.mi-img.com/product-images/mi-f2a1-cond8f0c2c2/section-10-item_${imgNum}.jpg`;
+      return false;
+    }
+  </script>
+</body>
+</html>

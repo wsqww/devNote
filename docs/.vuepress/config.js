@@ -68,6 +68,7 @@ module.exports = {
             { title: 'audio播放器', path: '/Javascript/audio播放器' },
             { title: 'camera摄像头', path: '/Javascript/camera摄像头' },
             { title: 'microphone麦克风', path: '/Javascript/microphone麦克风' },
+            { title: '鼠标滚动 wheel', path: '/Javascript/鼠标滚动wheel' },
           ]
         },
         {
