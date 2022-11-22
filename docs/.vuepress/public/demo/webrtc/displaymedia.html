@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>屏幕录制</title>
+</head>
+
+<body>
+  <h2>屏幕录制</h2>
+  <video id="video" src="" autoplay style="width: 700px; height: 500px; background-color: #000000;"></video>
+  <br>
+  <button onclick="shareScreen()">开始录制</button>
+  <button onclick="stopStream()">停止录制</button>
+
+  <script>
+    const videoElm = document.getElementById('video');
+    // 获取屏幕共享的媒体流
+    async function shareScreen() {
+      let localStream = await navigator.mediaDevices.getDisplayMedia({
+        audio: true,
+        video: true,
+      });
+      // 播放本地视频流
+      playStream(localStream)
+    }
+
+    // 在视频标签中播放视频流
+    function playStream(stream) {
+      videoElm.srcObject = stream
+    }
+
+    function stopStream() {
+      video.srcObject = null;
+    }
+  </script>
+</body>
+
+</html>

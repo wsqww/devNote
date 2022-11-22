@@ -66,9 +66,15 @@ module.exports = {
             { title: '数组去重', path: '/Javascript/数组去重' },
             { title: '懒加载', path: '/Javascript/懒加载' },
             { title: 'audio播放器', path: '/Javascript/audio播放器' },
-            { title: 'camera摄像头', path: '/Javascript/camera摄像头' },
-            { title: 'microphone麦克风', path: '/Javascript/microphone麦克风' },
             { title: '鼠标滚动 wheel', path: '/Javascript/鼠标滚动wheel' },
+          ]
+        },
+        {
+          title: 'WebRTC',
+          children: [
+            { title: 'camera摄像头', path: '/WebRTC/camera摄像头' },
+            { title: 'microphone麦克风', path: '/WebRTC/microphone麦克风' },
+            { title: 'displayMedia屏幕录制', path: '/WebRTC/displayMedia屏幕录制' },
           ]
         },
         {
