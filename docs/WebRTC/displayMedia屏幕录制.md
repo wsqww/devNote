@@ -1,6 +1,7 @@
 ## 摄像头
 
 主要使用：
+
 - **navigator.mediaDevices.getDisplayMedia**
 
 
