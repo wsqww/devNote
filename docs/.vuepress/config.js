@@ -122,7 +122,8 @@ module.exports = {
         transformer: (timestamp, lang) => {
           // 不要忘了安装 moment
           const moment = require('moment');
-          return moment(timestamp).locale('zh-CN').format('YYYY-MM-DD HH:mm:ss');
+          moment.locale('zh-CN');
+          return moment(timestamp).format('YYYY-MM-DD HH:mm:ss');
         }
       }
     ],
