@@ -2,7 +2,6 @@
 
 主要使用：
 - **navigator.mediaDevices.getDisplayMedia**
-- **  **
 
 
 #### 效果
