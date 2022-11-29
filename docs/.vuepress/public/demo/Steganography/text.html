@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐写术-文字</title>
+  <style>
+    #decodeText {
+      width: 500px;
+      min-height: 100px;
+      padding: 10px;
+      line-height: 26px;
+      border: 1px solid #aaaaaa;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>加密</h3>
+  <hr>
+  <h3>解密</h3>
+  <div>
+    <p>加密后的文字：</p>
+    <input id="encryptedText" type="text">&nbsp;&nbsp;&nbsp;<button onclick="decodeStr()">解密</button>
+    <p>隐藏文字：</p>
+    <div id="decodeText"></div>
+  </div>
+
+  <script>
+    function decodeStr() {
+      const tempText = document.getElementById('encryptedText').value;
+      console.log(tempText);
+      let text = tempText.replace(/[\u200b-\u200f\uFEFF\u202a-\u202e]/g, "");
+      let hiddenText = tempText.replace(/[^\u200b-\u200f\uFEFF\u202a-\u202e]/g, "");
+      // console.log(text, "text");
+      // console.log(hiddenText, "hiddenText");
+      const decodeText = hiddenText
+        .split("‎") //不是空字符串,是 &#8206;
+        .map((char) => {
+          if (char === "​" /* 不是空字符串,是&#8203; */) {
+            return "1";
+          } else if (char === "‌" /*  不是空字符串,是&#8204; */) {
+            return "0";
+          } else {
+            /* 是&#8205;时,用空格替换 */
+            return " ";
+          }
+        })
+        .join("")
+        //转数组
+        .split(" ")
+        //根据指定的 Unicode 编码中的序号值来返回一个字符串。
+        .map((binaryNum) => String.fromCharCode(parseInt(binaryNum, 2)))
+        .join("");
+      // console.log(text + decodeText);
+      document.getElementById('decodeText').innerText = decodeText;
+    }
+  </script>
+</body>
+
+</html>

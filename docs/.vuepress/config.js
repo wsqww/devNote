@@ -70,6 +70,15 @@ module.exports = {
           ]
         },
         {
+          title: 'NodeJs',
+          // path: '/NodeJs/',
+          children: [
+            { title: '终端完整打印obj', path: '/NodeJs/终端打印obj' },
+            { title: '终端显示提示选项', path: '/NodeJs/终端提示' },
+            { title: '文件操作', path: '/NodeJs/文件操作' },
+          ]
+        },
+        {
           title: 'WebRTC',
           children: [
             { title: 'camera摄像头', path: '/WebRTC/camera摄像头' },
@@ -78,12 +87,9 @@ module.exports = {
           ]
         },
         {
-          title: 'NodeJs',
-          // path: '/NodeJs/',
+          title: '隐写术',
           children: [
-            { title: '终端完整打印obj', path: '/NodeJs/终端打印obj' },
-            { title: '终端显示提示选项', path: '/NodeJs/终端提示' },
-            { title: '文件操作', path: '/NodeJs/文件操作' },
+            { title: '文字隐写', path: '/Steganography/text' },
           ]
         },
         {
