@@ -16,7 +16,23 @@
       border: 1px solid #aaaaaa;
       border-radius: 2px;
     }
-
+    input {
+      width: 350px;
+      padding: 2px;
+      line-height: 22px;
+    }
+    button {
+      cursor: pointer;
+    }
+    button:disabled {
+      cursor: not-allowed
+    }
+    .flex-box {
+      width: 520px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   </style>
 </head>
 
@@ -26,13 +42,23 @@
     <p>文字：<input id="iptText" type="text" autocomplete="off"></p>
     <p>密文：<input id="pwdText" type="text" autocomplete="off"></p>
     <button onclick="encodeStr()">加密</button>
-    <p>加密结果：</p>
+    <p class="flex-box">
+      <span>加密结果：</span>
+      <button id="copyBtn" onclick="copy()">复制</button>
+    </p>
     <div id="encodeText"></div>
   </div>
   <br><hr>
   <h3>解密</h3>
   <div>
-    <p>加密后的文字：<input id="encryptedText" type="text" autocomplete="off"></p>
+    <p class="flex-box">
+      <span>加密后的文字：</span>
+      <button onclick="clearIpt()">清空</button>
+    </p>
+    <p class="flex-box">
+      <input id="encryptedText" type="text" autocomplete="off">
+      <span style="font-size: 14px; color: #fa5856;">粘贴前请先清空</span>
+    </p>
     <button onclick="decodeStr()">解密</button>
     <p>隐藏文字：</p>
     <div id="decodeText"></div>
@@ -76,7 +102,7 @@
     }
     function decodeStr() {
       const tempText = document.getElementById('encryptedText').value;
-      console.log(tempText);
+      // console.log(tempText);
       let text = tempText.replace(/[\u200b-\u200f\uFEFF\u202a-\u202e]/g, "");
       let hiddenText = tempText.replace(/[^\u200b-\u200f\uFEFF\u202a-\u202e]/g, "");
       // console.log(text, "text");
@@ -101,6 +127,34 @@
         .join("");
       // console.log(text + decodeText);
       document.getElementById('decodeText').innerText = decodeText;
+    }
+
+
+    function copy() {
+      const copyBtn = document.getElementById('copyBtn');
+      // console.log(document.getElementById('encodeText').innerText);
+      const copyText = document.getElementById('encodeText').innerText;
+      navigator.clipboard.writeText(copyText)
+        .then(() => {
+          setCopyBtn('复制成功', '#33adff', true);
+          setTimeout(() => { setCopyBtn() }, 2000);
+        })
+        .catch(error => {
+          setCopyBtn('复制失败', '#fa5856', true);
+          setTimeout(() => { setCopyBtn() }, 2000);
+          throw new Error(error);
+        });
+    }
+    function setCopyBtn(text='复制', color="#000000", disabled=false) {
+      const copyBtn = document.getElementById('copyBtn');
+      copyBtn.innerText = text;
+      copyBtn.style.color = color;
+      copyBtn.disabled = disabled;
+    }
+
+    function clearIpt() {
+      // console.log(document.getElementById('encryptedText'));
+      document.getElementById('encryptedText').value = '';
     }
   </script>
 </body>
