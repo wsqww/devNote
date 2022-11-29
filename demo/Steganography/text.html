@@ -5,31 +5,75 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>隐写术-文字</title>
+  <title>隐写-文字</title>
   <style>
+    #encodeText,
     #decodeText {
       width: 500px;
-      min-height: 100px;
+      min-height: 50px;
       padding: 10px;
       line-height: 26px;
       border: 1px solid #aaaaaa;
       border-radius: 2px;
     }
+
   </style>
 </head>
 
 <body>
   <h3>加密</h3>
-  <hr>
+  <div>
+    <p>文字：<input id="iptText" type="text"></p>
+    <p>密文：<input id="pwdText" type="text"></p>
+    <button onclick="encodeStr()">加密</button>
+    <p>加密结果：</p>
+    <div id="encodeText"></div>
+  </div>
+  <br><hr>
   <h3>解密</h3>
   <div>
-    <p>加密后的文字：</p>
-    <input id="encryptedText" type="text">&nbsp;&nbsp;&nbsp;<button onclick="decodeStr()">解密</button>
+    <p>加密后的文字：<input id="encryptedText" type="text"></p>
+    <button onclick="decodeStr()">解密</button>
     <p>隐藏文字：</p>
     <div id="decodeText"></div>
   </div>
 
   <script>
+    function encodeStr() {
+      let text = document.getElementById('iptText').value;
+      let pwdText = document.getElementById('pwdText').value;
+      let cipherText = text.split("");
+      //在字符串中的随机一个位置插入加密文本
+      cipherText.splice(
+        parseInt(Math.random() * (text.length + 1)),
+        0,
+        //加密的文本
+        pwdText
+          .split("")
+          .map((char) => char.codePointAt(0).toString(2))
+          // ['1000001101100011','1001100001110110']
+          .join(" ")
+          //"1000001101100011 1001100001110110"
+          .split("")
+          /* [ '1', '0', '0', '0',  '0', '0', '1', '1', '0', '1', '1', '0', '0',  '0', '1', '1', ' ',
+              '1', '0', '0', '1', '1',  '0', '0', '0', '0', '1', '1', '1', '0', '1',  '1', '0'] */
+          .map((binaryNum) => {
+            if (binaryNum === "1") {
+              return String.fromCharCode(8203); // 零宽空格符&#8203;
+            } else if (binaryNum === "0") {
+              return String.fromCharCode(8204); // 零宽不连字符&#8204;
+            } else {
+              return String.fromCharCode(8205); //空格 -> 零宽连字符&#8205;
+            }
+          })
+          //对上面所有的数组元素进行处理,生成一个新的数组['​', '​', '‌'......]其中每一个元素都是零宽字符,分别代表0和1以及
+          .join(String.fromCharCode(8206))
+        // 用左至右符&#8206;来把上面的数组相连成一个零宽字符串=>"‎​‎‌‎‌"
+      );
+      cipherText = cipherText.join("");
+      // console.log(cipherText, "cipherText");
+      document.getElementById('encodeText').innerText = cipherText;
+    }
     function decodeStr() {
       const tempText = document.getElementById('encryptedText').value;
       console.log(tempText);
