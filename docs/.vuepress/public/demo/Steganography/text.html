@@ -23,8 +23,8 @@
 <body>
   <h3>加密</h3>
   <div>
-    <p>文字：<input id="iptText" type="text"></p>
-    <p>密文：<input id="pwdText" type="text"></p>
+    <p>文字：<input id="iptText" type="text" autocomplete="off"></p>
+    <p>密文：<input id="pwdText" type="text" autocomplete="off"></p>
     <button onclick="encodeStr()">加密</button>
     <p>加密结果：</p>
     <div id="encodeText"></div>
@@ -32,7 +32,7 @@
   <br><hr>
   <h3>解密</h3>
   <div>
-    <p>加密后的文字：<input id="encryptedText" type="text"></p>
+    <p>加密后的文字：<input id="encryptedText" type="text" autocomplete="off"></p>
     <button onclick="decodeStr()">解密</button>
     <p>隐藏文字：</p>
     <div id="decodeText"></div>
