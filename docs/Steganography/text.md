@@ -1,4 +1,4 @@
-## 文字隐写术
+## 文字隐写
 
 <!-- ### 加密
 
@@ -6,5 +6,5 @@
 
 #### 效果
 <br>
-<iframe style="width: 100%; height: 500px; border: 1px solid #ccc;" allowfullscreen="true" :src="$withBase('/demo/Steganography/text.html')"></iframe>
+<iframe style="width: 100%; height: 600px; border: 1px solid #ccc;" allowfullscreen="true" :src="$withBase('/demo/Steganography/text.html')"></iframe>
 
