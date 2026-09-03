@@ -14,3 +14,11 @@
 .VPHomeHero .main .tagline {
   max-width: 100%;
 }
+
+/* hero 标题字号改为流式:28px 下限、视口宽 3.2%、40px 上限,
+   替代默认主题的固定 48/56px;行高 1.35 让大字号下更紧凑 */
+.VPHero .name,
+.VPHero .text {
+  font-size: clamp(28px, 3.2vw, 40px) !important;
+  line-height: 1.35 !important;
+}
