@@ -1,0 +1,53 @@
+# 开发笔记自动部署:push 到 master 后自动构建并发布到 GitHub Pages
+name: Deploy 开发笔记
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch: # 允许在 Actions 页面手动触发
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时间只保留一个部署;连续 push 时新的排队等待,不打断进行中的发布
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v4
+      - name: 配置 Node 22(与本地一致)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: 配置 GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          # 仓库尚未开启 Pages 时自动开启;Source 切到 "GitHub Actions" 需在 Settings 手动操作一次
+          enablement: true
+      - name: 安装依赖(按 package-lock.json 锁定版本)
+        run: npm ci
+      - name: 构建站点
+        run: npm run docs:build
+      - name: 上传构建产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+
+  deploy:
+    needs: build # 构建成功才发布
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 发布到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
