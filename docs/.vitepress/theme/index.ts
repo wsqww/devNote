@@ -1,6 +1,7 @@
 import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import BackToTop from './components/BackToTop.vue'
+import './custom.css'
 
 /**
  * 自定义主题:在默认主题基础上注入返回顶部按钮。

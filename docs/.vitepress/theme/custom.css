@@ -1,0 +1,16 @@
+/**
+ * 首页 hero 标题宽度覆盖。
+ *
+ * 默认主题给 .name/.text 写死 max-width: 576px(VPHero.vue,≥640px 生效),
+ * 标题文字稍长就换行;这里放开为跟随 .main 容器宽度,超出可用宽度才换行。
+ * 选择器带 .heading 提升特异性,稳定压过默认主题的 scoped 样式。
+ */
+.VPHomeHero .heading .name,
+.VPHomeHero .heading .text {
+  max-width: 100%;
+}
+
+/* tagline 副标题默认同样被 576px(窄屏 392px)限制,放开为跟随容器宽度 */
+.VPHomeHero .main .tagline {
+  max-width: 100%;
+}
