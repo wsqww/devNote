@@ -5,7 +5,7 @@
 - Github page : 
   - 使用 **VitePress** 框架进行博客书写（2026-09 由 VuePress 1 迁移）；
   - 源码在 **master** 分支；
-  - 通过 **workflow** 自动构建 **静态页面** 到 **gh-pages** 分支；
+  - 通过 **GitHub Actions** 自动构建并发布到 **GitHub Pages**（无需 gh-pages 分支）；
   - 使用 **github page** + 自定义域名展示；
   - [点击查看](https://devnote.shuaiqiang.wang)；
 - Issues : 面试题汇总记录 并进行解析；

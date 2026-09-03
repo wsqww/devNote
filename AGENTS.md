@@ -60,6 +60,5 @@ specs/                # 设计/计划文档(勿放 docs/,会被当作页面构�
 
 ## 注意事项 / 坑
 
-- `README.md` 中"workflow 构建到 gh-pages 分支"的描述**已过时**,现无 gh-pages 分支,以本文件为准。
 - `.gitignore` 已忽略智能体/IDE 产物(`.zcode/`、`.history/`、`**/superpowers` 等),这些目录不要提交。
 - 构建产物 `docs/.vitepress/dist` 与缓存 `docs/.vitepress/cache` 均已 gitignore,勿手动修改或提交。
