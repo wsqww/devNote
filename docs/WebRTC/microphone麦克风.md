@@ -8,7 +8,7 @@
 
 #### 效果
 <br>
-<iframe style="width: 100%; height: 250px; border: 1px solid #ccc;" allowfullscreen="true" :src="$withBase('/demo/webrtc/microphone.html')"></iframe>
+<iframe style="width: 100%; height: 250px; border: 1px solid #ccc;" allowfullscreen="true" src="/demo/webrtc/microphone.html"></iframe>
 
 #### 代码
-<<< @/docs/.vuepress/public/demo/webrtc/microphone.html
+<<< @/public/demo/webrtc/microphone.html

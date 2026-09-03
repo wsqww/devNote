@@ -5,7 +5,7 @@
 - **order**
 
 #### 效果
-<iframe style="width: 100%; height: 320px; border: 1px solid #ccc;" allowfullscreen="true" :src="$withBase('/demo/其他/flex_order.html')"></iframe>
+<iframe style="width: 100%; height: 320px; border: 1px solid #ccc;" allowfullscreen="true" src="/demo/其他/flex_order.html"></iframe>
 
 #### 代码
-<<< @/docs/.vuepress/public/demo/其他/flex_order.html
+<<< @/public/demo/其他/flex_order.html

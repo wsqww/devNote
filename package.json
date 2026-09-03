@@ -1,13 +1,13 @@
 {
   "name": "devnote",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "develop note",
   "author": "王汪汪",
   "license": "ISC",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "deploy": "sh deploy.sh"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,6 @@
   },
   "homepage": "https://github.com/wsqww/devNote#readme",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.8.2",
-    "vuepress": "^1.8.2"
-  },
-  "dependencies": {
-    "moment": "^2.29.4"
+    "vitepress": "^1.6.4"
   }
 }

@@ -49,6 +49,16 @@ Thumbs.db
 # 避免 GitHub 报错
 # package-lock.json
 
-docs/.vuepress/dist
+docs/.vitepress/dist
+docs/.vitepress/cache
+
+# 忽略智能体生成的目录
+**/superpowers
+.zcode
+.codex
+.Codex
+.trae
+.cursor
+.playwright-mcp
 
 .history/

@@ -6,7 +6,7 @@
 
 #### 效果
 <br>
-<iframe style="width: 100%; height: 420px; border: 1px solid #ccc;" allowfullscreen="true" :src="$withBase('/demo/webrtc/camera.html')"></iframe>
+<iframe style="width: 100%; height: 420px; border: 1px solid #ccc;" allowfullscreen="true" src="/demo/webrtc/camera.html"></iframe>
 
 #### 代码
-<<< @/docs/.vuepress/public/demo/webrtc/camera.html
+<<< @/public/demo/webrtc/camera.html
